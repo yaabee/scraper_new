@@ -1,4 +1,4 @@
-#!/home/yaabee/pp/Scraper/venv/bin/python3
+#!/home/user199/pp/scraper_new/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
