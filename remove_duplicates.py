@@ -1,10 +1,10 @@
 from pymongo import MongoClient
-import pprint
 
-def remove_duplicates(db_name, col_name):
+def remove_duplicates(db_name, col_name, cache_key_name):
     '''
     parameter:
         db_name, col_name
+        cache_key_name: required in collection!
     description:
         remove duplicates
     funktion:
@@ -18,36 +18,21 @@ def remove_duplicates(db_name, col_name):
     collection = client[db_name][col_name]
     cursor = collection.find({})
     cache = {}
-    #no cache_key_name
     for i in cursor:
-        to_delete = i.pop('_id')
-        pprint.pprint(i, indent=2)
-        print('todelete', to_delete)
-        i_values = i.values()
-        cache_key_name = hash(i_values)
-        if cache_key_name in cache:
+        if i[cache_key_name] in cache:
             try:
-                delete_one = collection.delete_one({'_id': to_delete})
+                delete_one = collection.delete_one({'_id': i['_id']})
                 print(delete_one.deleted_count)
             except Exception as e:
                 print('error with del dataset:', i)
                 print(e.args)
         else:
-            cache[cache_key_name] = i
-    # print(len(cache.values()))
-
-
-    # cache_values = cache.values()
-    # for k in cache_values:
-    #     try:
-    #         insert_one = collection.insert_one(k)
-    #         print(insert_one.inserted_id)
-    #     except Exception as e:
-    #         print('error with ins dataset:', k)
-    #         print(e.args)
+            cache[i[cache_key_name]] = i
+    print(len(cache.keys()))
 
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'heinze'
-    remove_duplicates(db_name, col_name)
+    col_name = 'heinze_zfid'
+    use_as_cache_key = 'ZFID'
+    remove_duplicates(db_name, col_name, use_as_cache_key)

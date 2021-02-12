@@ -12,7 +12,7 @@ import requests
 def zfid_einspielen(db_name, col_name):
   client = MongoClient('192.168.100.5:27017')
   collection = client[db_name][col_name]
-  cursor = collection.find({})
+  cursor = collection.find({'ZFID': {'$exists': False}})
   for i in cursor:
     payload_google = dict(
       Firma=i['Firma'],
