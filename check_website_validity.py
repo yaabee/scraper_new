@@ -31,8 +31,10 @@ def check_email_validiy(db_name, col_name):
   collection = client[db_name][col_name]
   cursor1 = collection.find({'WebsiteStatus.online': False, 'WebsiteStatus.mail': {'$ne': 'www.info@xxxxx'}})
   cursor2 = collection.find({'WebsiteStatus.online': True})
+  cursor3 = collection.find({'WebsiteStatus.online': {'$exists': True}, 'WebsiteStatus.mail': {'$ne': 'www.info@xxxxx'}})
   print(len(list(cursor1)))
   print(len(list(cursor2)))
+  print(len(list(cursor3)))
   # for i in cursor:
   #   print(i['Internet'])
   #   r = check_website(i['Internet'])

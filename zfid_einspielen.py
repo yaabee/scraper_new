@@ -20,8 +20,9 @@ def zfid_einspielen(db_name, col_name):
       PLZ=i['PLZ'],
       Ort=i['Ort'],
       Telefon=i['Telefon'],
-      Internet=i['Internet'],
-      Fax=i['Fax'],
+      Internet=i['Homepage'],
+      # Fax=i['Fax'],
+      Fax='xxxxx',
       options={
         "ensureWrite": False,
         "forceInsert": False,
@@ -43,6 +44,7 @@ def zfid_einspielen(db_name, col_name):
 
 
 if __name__ == '__main__':
-  db_name = 'scrp_listen'
-  col_name = 'heinze'
+  #google_google_gebäudetechnik_marburg_xlsx
+  db_name = 'cleaned_xlsx'
+  col_name = 'google_tga_xlsx'
   zfid_einspielen(db_name, col_name)
