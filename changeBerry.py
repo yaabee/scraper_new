@@ -11,9 +11,6 @@ client = MongoClient('192.168.100.239:27017',
                      ssl=True,
                      ssl_cert_reqs=ssl.CERT_NONE)
 
-zf = client['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['cleaned_xlsx']['google_google_ingenieur_marburg_xlsx']
-
 planerhkls = dict(
   Herkunft='Google',
   Name='planer_hkls',
@@ -80,8 +77,9 @@ fensterbauer = dict(
   WZCode=1988,
 )
 
+zf = client['ZentralerFirmenstamm']['ZentralerFirmenstamm']
+col = client_5['cleaned_xlsx']['google_google_ingenieur_marburg_xlsx']
 cursor = col.find({}, {'ZFID': 1})
-
 for i in cursor:
   print(i['ZFID'])
   zf.update_one(
