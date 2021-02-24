@@ -1,6 +1,8 @@
 #add parent-module-path
 from bs4 import BeautifulSoup
 import requests
+import re
+
 
 def remove_escapechars(string_value):
     '''
@@ -22,9 +24,29 @@ def energie_effizienz_experten(url):
             name = ' '.join([x.strip() for x in name.split(' ') if x])
             print(name)
         if tele := single.find('div', class_='telefon'):
-            print(tele)
+            print(tele.text)
         else:
-            print('no tele found')
+            tele = 'xxxxx'
+            print(tele)
+        if email := single.find('div', class_='email'):
+            at = '@'
+            email.select_one('.print-color').replaceWith(at)
+            print(email.text.strip())
+        adress = single.find('p', class_='adresse')
+
+        # firma = adress.strong.text
+        # if firma:
+        #     firma = firma
+        # else:
+        #     firma = 'xxxxx'
+        # print(firma)
+        split_adress = [x.strip() for x in adress.text.split(r'\n')]
+        firma = split_adress[0]
+        strasse = split_adress[1]
+        plz_ort = split_adress[2]
+        print(firma)
+        print(strasse)
+        print(adress)
         # print(single.prettify())
         print('==========================================')
 
