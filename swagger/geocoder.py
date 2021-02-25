@@ -1,10 +1,13 @@
 import requests
 
-def get_geodata(plz, strasse):
+def get_geodata(url, plz, strasseundnr, ort):
     data = {
-        'StrasseUndNr': strasse,
+        'Land': '',
+        'Ort': ort,
         'PLZ': plz,
-        'Ort': '',
+        'StrasseUndNr': strasseundnr,
+        "options": {
+            "returnMultiple": True
+        }
     }
-    req = requests.post('', data={})
-    return
+    return requests.post(url, json=data)

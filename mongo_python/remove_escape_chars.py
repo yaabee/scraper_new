@@ -26,6 +26,7 @@ if __name__ == '__main__':
     db_name = 'scrp_listen'
     col_name = 'heinze_zfid'
     field_name = 'Firma'
-    remove_escape_chars(db_name, col_name, field_name)
+    # remove_escape_chars(db_name, col_name, field_name)
+    print(remove_escapechars('K&K  Architekturbüro   \t  \t  \tklaus kammerer Architekt Dipl-ing margarete klusemann'))
 
 
