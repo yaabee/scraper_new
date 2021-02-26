@@ -12,10 +12,43 @@ def make_xlsx(array, file_name):
     df1.to_excel(f"~/Desktop/{file_name}.xlsx")  
     
 if __name__ == '__main__':
-    db_name = 'cleaned_xlsx'
-    col_name = 'google_tga_xlsx'
+    db_name = 'scrp_listen'
+    col_name = 'energie_effizienz_full'
     # search_for_plz = {'PLZ': {'$regex': r'^97'}}
-    search_for_plz = {}
-    zfid_array = search_for_zfids_for_export(db_name, col_name, search_for_plz)
-    file_name = 'google_tga_marburg'
+    query = {
+        # '$or': [
+        #    {'PLZ': {'$regex': '^20'}}, 
+        #    {'PLZ': {'$regex': '^29'}}, 
+        #    {'PLZ': {'$regex': '^30'}}, 
+        #    {'PLZ': {'$regex': '^31'}}, 
+        #    {'PLZ': {'$regex': '^32'}}, 
+        #    {'PLZ': {'$regex': '^33'}}, 
+        #    {'PLZ': {'$regex': '^34'}}, 
+        #    {'PLZ': {'$regex': '^35'}}, 
+        #    {'PLZ': {'$regex': '^36'}}, 
+        #    {'PLZ': {'$regex': '^37'}}, 
+        #    {'PLZ': {'$regex': '^38'}}, 
+        #    {'PLZ': {'$regex': '^39'}}, 
+        #     ], 
+            "Energieberatung_für_Wohngebäude_(BAFA)": True,
+            "Effizienzhaus_(KfW)": True,
+            'Einzelmaßnahmen': True}
+    # query = {
+    #     '$or': [
+    #        {'PLZ': {'$regex': '^10'}}, 
+    #        {'PLZ': {'$regex': '^12'}}, 
+    #        {'PLZ': {'$regex': '^13'}}, 
+    #        {'PLZ': {'$regex': '^14'}}, 
+    #        {'PLZ': {'$regex': '^15'}}, 
+    #        {'PLZ': {'$regex': '^01'}}, 
+    #        {'PLZ': {'$regex': '^04'}}, 
+    #        {'PLZ': {'$regex': '^09'}}, 
+    #     ],
+    #     "Energieberatung_für_Wohngebäude_(BAFA)": True,
+    #     "Effizienzhaus_(KfW)": True,
+    #     'Einzelmaßnahmen': True
+    # }
+
+    zfid_array = search_for_zfids_for_export(db_name, col_name, query)
+    file_name = 'energie_effi_gesamt'
     make_xlsx(zfid_array, file_name)

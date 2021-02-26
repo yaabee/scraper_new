@@ -16,7 +16,7 @@ def zfid_einspielen(db_name, col_name):
   for i in cursor:
     payload_google = dict(
       Firma=i['Firma'],
-      Straße=i['Strasse'],
+      Straße=i['StrasseUndNr'],
       PLZ=i['PLZ'],
       Ort=i['Ort'],
       Telefon=i['Telefon'],
@@ -45,6 +45,6 @@ def zfid_einspielen(db_name, col_name):
 
 if __name__ == '__main__':
   #google_google_gebäudetechnik_marburg_xlsx
-  db_name = 'cleaned_xlsx'
-  col_name = 'google_tga_xlsx'
+  db_name = 'scrp_listen'
+  col_name = 'energie_effizienz_full'
   zfid_einspielen(db_name, col_name)
