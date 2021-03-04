@@ -30,9 +30,9 @@ if __name__ == '__main__':
         #    {'PLZ': {'$regex': '^38'}}, 
         #    {'PLZ': {'$regex': '^39'}}, 
         #     ], 
-            "Energieberatung_für_Wohngebäude_(BAFA)": True,
-            "Effizienzhaus_(KfW)": True,
-            'Einzelmaßnahmen': True}
+            # "Energieberatung_für_Wohngebäude_(BAFA)": True,
+            # "Effizienzhaus_(KfW)": True,
+            # 'Einzelmaßnahmen': True
     # query = {
     #     '$or': [
     #        {'PLZ': {'$regex': '^10'}}, 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     #     "Energieberatung_für_Wohngebäude_(BAFA)": True,
     #     "Effizienzhaus_(KfW)": True,
     #     'Einzelmaßnahmen': True
-    # }
+    }
 
     zfid_array = search_for_zfids_for_export(db_name, col_name, query)
     file_name = 'energie_effi_gesamt'

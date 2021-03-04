@@ -3,7 +3,7 @@ import ssl
 import re
 
 client_5 = MongoClient('192.168.100.5:27017')
-client = MongoClient('192.168.100.239:27017',
+client_239 = MongoClient('192.168.100.239:27017',
                      username='mongoroot',
                      password='9gCaPFhotG2CNEoBRdgA',
                      authSource='admin',
@@ -77,15 +77,21 @@ fensterbauer = dict(
   WZCode=1988,
 )
 
-zf = client['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['cleaned_xlsx']['google_google_ingenieur_marburg_xlsx']
-cursor = col.find({}, {'ZFID': 1})
+zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
+col = client_5['GoogleApi']['google_technischer_berater_marburg']
+cursor = col.find({}, {'ZFID': 1, 'business_status': 1})
 for i in cursor:
   print(i['ZFID'])
+  # zf.update_one(
+  #   {'ZFID': i['ZFID']},
+  #   {'$addToSet': {'Meta.BusinessStatus': }}
+  # )
+
   zf.update_one(
     {'ZFID': i['ZFID']},
-    {'$addToSet': {'Meta.BranchenDetails.Extern': ingenieur}}
+    {'$set': {'Meta.BusinessStatus': i['business_status'], 'Meta.Inaktiv.Grund': 'It. Internet/google dauerhaft geschlossen'}}
   )
+
   # firmenadresse.update_one(
   #   {'ZFID': i['ZFID'], 'Meta.Branchen': []},
   #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}}

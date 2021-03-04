@@ -8,7 +8,7 @@ def remove_escapechars(string_value):
     string_value = ' '.join(string_value.splitlines())
     escapes = ''.join([chr(char) for char in range(1, 32)])
     translator = str.maketrans('', '', escapes)
-    return string_value.translate(translator)
+    return ' '.join([x for x in string_value.translate(translator).split(' ') if x])
 
 def remove_escape_chars(db_name, col_name, field_name):
     client = MongoClient('192.168.100.5:27017')
