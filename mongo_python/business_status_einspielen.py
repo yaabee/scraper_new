@@ -50,4 +50,4 @@ def business_status_einspielen(cleaned_xlsx_col_name, googleApi_col_name):
         print('inserted', str(insertion.acknowledged))
 
 if __name__ == '__main__':
-    business_status_einspielen('google_tga_xlsx', 'google_tga')
+    business_status_einspielen('GoogleApi', 'google_technischer_berater_marburg')

@@ -3,6 +3,9 @@ beautifulsoup4==4.9.3
 bs4==0.0.1
 certifi==2020.12.5
 chardet==4.0.0
+colorama==0.4.4
+configparser==5.0.1
+crayons==0.4.0
 et-xmlfile==1.0.1
 idna==2.10
 isort==5.7.0
@@ -22,4 +25,5 @@ six==1.15.0
 soupsieve==2.1
 toml==0.10.2
 urllib3==1.26.3
+webdriver-manager==3.3.0
 wrapt==1.12.1

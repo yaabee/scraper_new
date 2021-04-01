@@ -3,13 +3,6 @@ from pymongo import MongoClient
 import ssl
 import requests
 
-# client = MongoClient('192.168.100.239:27017',
-#                      username='mongoroot',
-#                      password='9gCaPFhotG2CNEoBRdgA',
-#                      authSource='admin',
-#                      authMechanism='SCRAM-SHA-256',
-#                      ssl=True,
-#                      ssl_cert_reqs=ssl.CERT_NONE)
 def remove_escapechars(string_value):
     '''
     remove escape chars from given field
@@ -20,9 +13,7 @@ def remove_escapechars(string_value):
     translator = str.maketrans('', '', escapes)
     return ' '.join([x for x in string_value.translate(translator).split(' ') if x])
 
-
 #plz test
-
 
 def check_website(website):
   if 'https://www' in website:
@@ -47,6 +38,11 @@ def check_website(website):
   except Exception as e:
     print(f'error: {e}')
   
+def get_clean_telefon(tele):
+    payload = {
+        'firma_telefon': tele
+    }
+    return requests.post('http://192.168.100.239:9099/005phonenumbers', json=payload).json()
 
 
 def zfid_einspielen(db_name, col_name):
@@ -55,12 +51,12 @@ def zfid_einspielen(db_name, col_name):
   cursor = collection.find({'ZFID': {'$exists': False}})
   for i in cursor:
     payload_google = dict(
-      Firma=remove_escapechars(i['Firma']),
+      Firma=remove_escapechars(i['name']),
       Straße=remove_escapechars(i['StrasseUndNr']),
       PLZ=i['PLZ'],
       Ort=remove_escapechars(i['Ort']),
-      Telefon=i['Telefon'],
-      Internet=check_website(i['Homepage'])['domain'],
+      Telefon=get_clean_telefon(i['Telefon'])['firma_telefon'],
+      Internet=check_website(i['website'])['domain'],
       # Fax=i['Fax'],
       Fax='xxxxx',
       options={
@@ -69,6 +65,7 @@ def zfid_einspielen(db_name, col_name):
         "returnDocument": False,
       }
     )
+    print(payload_google)
     url = "http://192.168.100.239:9099/zf_adresse_neuanlageNachAccess"
     r = requests.post(url, json=payload_google).json()
     print(r)
@@ -85,6 +82,6 @@ def zfid_einspielen(db_name, col_name):
 
 if __name__ == '__main__':
   #google_google_gebäudetechnik_marburg_xlsx
-  db_name = 'scrp_listen'
-  col_name = 'energie_effizienz_full'
+  db_name = 'GoogleApi'
+  col_name = 'google_ingenieur_marburg'
   zfid_einspielen(db_name, col_name)

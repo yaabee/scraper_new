@@ -77,25 +77,36 @@ fensterbauer = dict(
   WZCode=1988,
 )
 
+energieberater = dict(
+  Herkunft='Google',
+  Name='energieberater/1',
+  WZCode=227491104,
+
+)
+
 zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['GoogleApi']['google_technischer_berater_marburg']
-cursor = col.find({}, {'ZFID': 1, 'business_status': 1})
+col = client_5['scrp_listen']['energie_effizienz_full']
+cursor = col.find({}, {'ZFID': 1})
+
 for i in cursor:
   print(i['ZFID'])
+
+  ds = zf.find_one({'ZFID': i['ZFID']})
+
+  print('meta', ds['Meta']['BranchenDetails']['Extern'])
+
   # zf.update_one(
   #   {'ZFID': i['ZFID']},
-  #   {'$addToSet': {'Meta.BusinessStatus': }}
+  #   {'$addToSet': {'Meta.BranchenDetails.Extern': energieberater}}
   # )
 
-  zf.update_one(
-    {'ZFID': i['ZFID']},
-    {'$set': {'Meta.BusinessStatus': i['business_status'], 'Meta.Inaktiv.Grund': 'It. Internet/google dauerhaft geschlossen'}}
-  )
 
-  # firmenadresse.update_one(
-  #   {'ZFID': i['ZFID'], 'Meta.Branchen': []},
-  #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}}
+  # zf.update_one(
+  #   {'ZFID': i['ZFID'], 'Meta.Inaktiv.Grund': 'It. Internet/google dauerhaft geschlossen'},
+  #   {'$set': {'Meta.IstInaktiv': False, 'Meta.Inaktiv.Grund': ''}}
   # )
+
+  # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
 
   # delete field
   # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
@@ -103,12 +114,5 @@ for i in cursor:
   # remove from array
   # zf.update_one(
   #   {'ZFID': i['ZFID']},
-  #   {'$pull': {'Meta.BranchenDetails.Extern': seb}}
+  #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
   # )
-
-  # zf.update_one(
-  #   {'ZFID': i['ZFID']},
-  #   {'$pull': {'Meta.BranchenDetails.Extern': ausf_elektro_z}},
-  #   {}
-  # )
-
