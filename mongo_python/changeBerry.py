@@ -85,7 +85,7 @@ energieberater = dict(
 )
 
 zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['scrp_listen']['energie_effizienz_full']
+col = client_5['GoogleApi']['google_Stadtplaner_Stadtplaner']
 cursor = col.find({}, {'ZFID': 1})
 
 for i in cursor:
@@ -93,7 +93,6 @@ for i in cursor:
 
   ds = zf.find_one({'ZFID': i['ZFID']})
 
-  print('meta', ds['Meta']['BranchenDetails']['Extern'])
 
   # zf.update_one(
   #   {'ZFID': i['ZFID']},
@@ -101,10 +100,10 @@ for i in cursor:
   # )
 
 
-  # zf.update_one(
-  #   {'ZFID': i['ZFID'], 'Meta.Inaktiv.Grund': 'It. Internet/google dauerhaft geschlossen'},
-  #   {'$set': {'Meta.IstInaktiv': False, 'Meta.Inaktiv.Grund': ''}}
-  # )
+  zf.update_one(
+    {'ZFID': i['ZFID']},
+    {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
+  )
 
   # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
 

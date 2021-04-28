@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+ <head id="Head1">
+  <title>
+   Architekten Göken + Henckel GbR aus Oldenburg
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="noindex, follow" name="robots"/>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/Global.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/main.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/gradients.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/site.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/iconfont.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/jquery.classyedit.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <link href="../../Styles/cookiebot_xpertio.css?t=1.46.100" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39759699-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_gat._anonymizeIp']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_setSampleRate', '100']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+
+        // If the browser is not IE, the ieVersion is set to 100.
+        // Useful when comparing for "higher than" version, because non-ie browsers support most of the latest JS features.
+        var ieVersion = 100;
+        if (typeof document.documentMode == "number") { ieVersion = document.documentMode; }
+  </script>
+  <script data-blockingmode="auto" data-cbid="c472285b-16ee-4a94-b7d6-1f33b5d77572" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" type="text/javascript">
+  </script>
+  <!--[if lte IE 8]>
+        <link href="../../Styles/ie.css?t=1.46.100" rel="stylesheet" type="text/css" />
+    <![endif]-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!--[if lte IE 7]>
+    <script type="text/javascript">
+        ieVersion = 7;
+    </script>
+    <![endif]-->
+  <link href="../../App_Themes/Architect/theme.css" rel="stylesheet" type="text/css"/>
+  <meta content="Architekten Göken + Henckel GbR" property="og:title"/>
+  <meta content="xpertio.net - Das Netzwerk der Bau-Experten" property="og:description"/>
+  <meta content="https://www.xpertio.net/images/frob_logo.png" property="og:image"/>
+  <link href="https://www.xpertio.net/architekten-goeken-henckel-gbr_oldenburg/10/16145" rel="canonical"/>
+  <link href="https://ajax.aspnetcdn.com/ajax/act/20_1_0/Content/AjaxControlToolkit/Styles/Tabs.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ajax.aspnetcdn.com/ajax/act/20_1_0/Content/AjaxControlToolkit/Styles/Backgrounds.css" rel="stylesheet" type="text/css"/>
+  <meta content="Das Unternehmensprofil von Architekten Göken + Henckel GbR, Architekten BDA aus Oldenburg anschauen. Architekten Göken + Henckel GbR ist in folgenden Branchen tätig: Architekt und Bauplaner, Stadtplaner ansehen." name="description"/>
+ </head>
+ <body>
+  <form action="./16145?name=architekten-goeken-henckel-gbr&amp;ziporcity=oldenburg&amp;id=16145" enctype="multipart/form-data" id="Form1" method="post">
+   <input id="cphContainer_cphMain_Tabs_ClientState" name="cphContainer_cphMain_Tabs_ClientState" type="hidden" value='{"ActiveTabIndex":0,"TabEnabledState":[true,true,true,true,false,false],"TabWasLoadedOnceState":[false,false,false,false,false,false]}'/>
+   <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value=""/>
+   <script src="https://ajax.aspnetcdn.com/ajax/4.6/1/MicrosoftAjax.debug.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('<script type="text/javascript" src="/ScriptResource.axd?d=8mU_QSMgokBgYDBL1S_D-VsySc9twpAdPwpPMj04-kj74OMo0mcW9JJXBCJ7u6FN8rBgzfCz8MhcJM9yRkz4ZA4tfIoS4LM2lxPQSnRoy29naX-jkRnyLUjii98essaKk4QN9uL-1jdIEt83d8r5FxCBNbJ_F_8M1JKcharxxYRhMGdcV-DBxeTAtmjmGMaW0&t=2fe674eb"><\/script>');//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+   </script>
+   <script src="../../Scripts/jquery-1.8.3.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/jquery.textshadow.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/frob_carousel.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/Controls.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/color_on_hover.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/PIE.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/jquery.mousewheel.min.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/url-rewriter.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/text_validate.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/jquery.cookie.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/cookie-manager.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/jquery.customSelect.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/controls/customMenu.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="/Scripts/controls/customStickyBar.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7u-P7ih752NabF5vAQOaDJCdvfx5wbYI&amp;language=de&amp;region=de" type="text/javascript">
+   </script>
+   <script src="../../Scripts/infobox_packet.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/GeoLocation.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/pages/profile.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/controls/customAccountSelection.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/spin.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="/Scripts/controls/customContactForm.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="/Scripts/spin.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="../../Scripts/controls/customCompanyEmployeesView.js?t=1.46.100" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=MH3sUfcFIu7n2itsLnKklnb_EK7mExEAPgJ3tec2e02BltaQM2uvDbLriQPUDUMUIc-z_T8e0UiHQh-6Bv9irAS2Z8yPZh5zwDdfHSX-85qKICbBBtP2aPkUpIH2Nzk3PYpr1EZMY02ArtuiLwqEfQ2&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=AWauyV1FD0jL7UbDjnVACtl0eZ4n6gmYbBi_92KO5CRbY0AUy426YAylOSsa7ywcwmx-TwPG-kCp9FufYGrwwchsDuuRQgfqoUkWzhusRMjpdD4tnp5bkqy7cXmFNiaAr4yiPkYyC8wEo9IBnwD1iQ2&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=prQVr6wMEmpYJJTvRbyc08Pii_kDd7B-9w3OA88J0mQXTRUd4EPnUIDAyxn8yxWaeGzv-ZX1xEGDnegcLix3Tzh6I98cNlL61Z3szB3wClIb6DxTVNlQ4ctt9Os2uk0S0&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=_fHmJk7bicYtW-7IeveXL4lKhog86e4N1TVcgw_swif1AI5M2h8csvw2WiiBAJZ6_3OmnzXPGYxRielCrXOIRK_jxuxLKa3XDCUKz2zBtwSkPVSVYne2otrzxBs7OLpLbRX-M3ipKJkm943izag_Aw2&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=nlR2TZnKvoEE4WmzNm42T4J4kkURzgtKyaNE24HP-OFNu0fL8HSE8FfI8GiVkWAPOG8WJ9Qs-lRFguxgQZl8OuBCULrufjqePzQ3_J1OFFIYSCbaqTdDMtb09rCvBIr3d0RxHHIpBHtODxgCPY0Btg2&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=nwnI7eiQ_ZtcPwQLuPwJ0GvlmXYmKWUEc4z1g9jDL5we_86DkK2BkXSPL-66mdfdu3Dikd7CAr3mMEci5qsQI3--_IPHQ350eqZHsHyNp08gnMv8rdyfgxNYZeRmmUbI0&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=amalc5oQuer2vDcCCKkcxuVdGGWXJmJxyOCnZWfUu6wXiuqo0iSZKELCJvQYivIJnGOdYam5QBFV49CdYppOVVNStQwKM1zKjn9mkNTtjy8Lv6i8fBm96GfIfyTep4qKq2u_Jvqhml9zNFXoRSp2-A2&amp;t=7d5986a" type="text/javascript">
+   </script>
+   <input id="__PREVIOUSPAGE" name="__PREVIOUSPAGE" type="hidden" value="u2wjH3NsKlhZTk4BFsT1jA492DgB6Ysq9vQ_CTw02MbqellmQFN0Qh6FQzmInyNINzjHQXFAbqEhsJPc68K4FuPs8k91hvZwQHRWRWp7thA1"/>
+   <input id="ScriptManagerDefault" name="ctl00$ctl00$ScriptManagerDefault" type="hidden"/>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Application.setServerId("ScriptManagerDefault", "ctl00$ctl00$ScriptManagerDefault");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+   </script>
+   <div id="upViewState">
+    <input id="hfVIEWSTATE" name="ctl00$ctl00$hfVIEWSTATE" type="hidden" value="H4sIAAAAAAAEAO1ZS3MbxxEmFhi+KTgyBauSFDiSCVEMDS4ASnJMimTxIcm0LQmhHj5ECWt2dxY74WIXmR3w4YOr8l+SU+46+cZfkh+Ssntm3xDEh3RxVSJKg+Fgtqf76+6ve1Y/F8o3x9ETU7iNxnw09pwd3xOEeZTLX57CbP4lMQI5NOfNNvf/Rk0RzLtHzw0526c25dQzaVCeXRq5ZoV/YFqED00OtjZtoe8vfcjKvLlPTb/bpZ5FBPO9ALZ0+OAaLH3HAlF+uDRSKhRtC9UudUK5bMHepx+jjXs0sCJ1uKZN2zPapIWqBwdSGvfdYJ/+vc84bfuB2Cbm4bf09OCgoqGXFx5ublnWPu36R/QxOfI5E3TefEHS33YZcf3OvOkc7gVtzo6IoJc0H317actbCvY24QK+fUq8vk1M0eeUp9iDl0vgZASIbl1Brns0TGqKIrLQnz4oJqXCg1E5qOw0xGQZTdWbjeZKq/nV/ZVW2apodjJoBRjHtWK8cA0WyhWtOvWMHLEOIP2Ku+imI0QvWNX14+Pj5ZMe5RAHyx4Vugx5tb30kp4INLVL+yIwHZd4MhuQ/GpuBE3rfU9Q7lFHBpGljUXrE3pPmnIoKCxORYu/f99ZZjeQ581EWoe793SIDOZt7lNA1XvF2XqtZRNuOhA2INerd3x6CB8OgHNI3XrH4Ae+a1HP6PMObG025PCgee8+iC4rU8Zes4AZLnVidCYTQ6r6C2qC9/Q2OND3HllMLJOgd7LZE8RYX8mYdv7OBuycuNTOZgaZ83e2YOenynMHt/YE7e74ALr2M/wpW1pJgaZJV9tSWAHtfYlDMdTDh74H/vHwC0axx0xHYJt5gNEX2CJq8ZAyue8ZAf9h4nVohxowcwiMy1bkDM0BDbRw2okDI1xFSaTNqjGvys4+7UDEciZDGPc9C0NY2Eyo31dxJgawwZnXEUon33NBKXxMwdM8VaKTKuHkldDiEJ+EveFiolgI8OsfISCZJ/TLBpDebOgqePRIyYP0yXRX6GxLZonDqY3+U+gS5gp/dTPoq+xdz5pYx1vp6fhJzVypGQ9AA1xrGfjrUAv8xNi/Y/jW6XqtYdUaZE+mFw0CAp8Bbkv0XGxQlsOuQ+2+9GpthYRPhaNKN7nWsuHvQNJ9cDLJXJIWzxDLEg4LVgUTLkV5287eSruWslZZ2m/Ug3PoMnuLqUuLofcjb5YgrCaex6pVyztQv4CTtninDyEs0K33kUzWaSgKKEjqrOxRkH090Q3ruA10R3l1KjpEZknm8LlRdO99p2WwPegpKXo+aiIFpsJEuQQiowBGKeZxwB+ZLgkCVOlwZtWDHvGaD7Ca24wHojIa4lZA9x46Taz2ri84rYWNi056qDvNjRCi6gTzQHNHdF1Uzj63vbsVkxfo/gRqIPUgzZdxq0UgzFsPmq0Wfp6xt5imZZK1Y+l0Kp3OpNNynPfgnrAWTcUdiCxdlR91nqEXvanHbJ+wVkRN4ViS6zJyx3zPdJl5iP5oun5Av2MdR2z7J1ue1fZ7/d7dhZ78qLOuogxs0cDkrCcbpLrhnywsrq2F8RkLnJv6OEnSspnn3o7LIIB3lGY1rqoeDqjY86CvYEd0uy8EtGgvBFTuuzLxFtfA1PFIj3gMTR2NIIBUedTt2dRxVXUuRoufRot9r4Pds7dQ1tXXE3HOpQLV9n8UJCurkoC7FIiOU/wqLfuB4nSXLuNtJgTw9tk/5XmKyi2SkBbpB1/gs58MyoHZXTgyCHcwGsA0Iw/TWGXcPXsLNUtVIhki49XxnSDYUXG/aCg8cPhRN9w+xSyCCncJh9ah7lJbNBs5FOam0Wc81/Q+2dq5K3ifLlZLB7debGuaFXs3SqDPv/fdxB74NwS8zbDoj8/NoOvv6vUexEGVm++qYhM3oItz15QeuXIHbrWzHpJ8NYPq+fM6nJ7GcztqsrHt+kQoNECVyW3qG0TBGp2CorAoNFTu5IIgaiXHYvKJSmp18mtKLMpVb7iehgcYBrpIlLrkhHWJS/GW9wNxwP0ejpt+DwpW0KPQjgBfLkdmjoMC/y0+lEQWs5XZD4TfrXdl+etQyKIOHlwy4bQha3XKuc9BjwC497TOVEMBvvDNwwwYCxsPdXneRu5UGxp0yE7XuvjxxzKk+B3PCHpr9fBjmMSL5OBAnLp0/fYxg4K62vqy0Tu5vfFRmMZaEBxR3fqCZIzlHgGiFM98iy4r3WRBW78d6+dBy3h7beHy8CvSG7oYOkACTIZjEYJgupTwxA0Qzd/kheEeNBnQF9aPZGU1idu8L0FIIjvy84AG4aIM7rhdTW5DUV9ay9INEBPek6yG5e2KYkDIll96VsrvjXP53aIuBWVirUJe1zINaAF9kyGRY8YPwSmOYsfhmsQ5CnwRuHmtNq13qs8HaBeWgunLFxqtnLtXaol9UbUJNdHP1SRWIahLm7IwFQekx1PZ57wmwKGSnAbNvvphV7Z6IuFaye2/zUdvVGWE32s1qjfjAr6lxMF9fseR9ykL/U5e8A+Gf1m9/h0J0tU96OJPbEXLlUk75dy4cBdWYoZOOxr1xfaWF1ZSD7eji7eHjwm/sK+Eu4SgzGUdYWWa7lI8Vf0SUvyEZiLrVyVPrCkVZpdGNOuTyoj6KdkZlYZe0ZIGvtCMb49lq/xJBdlaAQKqqJUqqFKqTu9Sm/RdEToeqa6ueq1NOLAVJItahpPmZpEG1f1GOAWRN2RYxAMCcdFPriPMVjHQZDSk7RysCoLxZMvurgQWR296MOEGVYTbZeJieH/oB6TbjbovBVd8aY71yGKommKJiAaIVDRpSWR/ZJlWUuZoeXNKQ8zJZVTihsK7KZZ7R5QC8zSyOn6TcCfHVGFlutB62cn5UfOJEvPH3m/+RGh+KQqISinj0XQoZTxbkiFVHXvkEcOllhMyPlJxVnFi/o8uH9ND7wUZJKbjnm/2GbAvVy9MoHYBT8jrdeK4/H20jP79v9m3bIT9vn32U1LaCMxw25bVDcoVXAC5LGq/qnYkjInM5fNz1dDOAq2wsA1/dNKTr1xghm789e6bpcXNPzfqX+E3dV1/c/fN4l+W4KFa+k6qrqJgBlWitjvoZprxpMlW+4ualiUgSYWfpe8b5PuxbdIPXxfMjaDtK7xcSJbqIKVuxFIyKR8eNwUFzhLJEQ+ucESQPgliZ0P88rW7lE6LA01Cpm7/4dy6DZzh+qeUBkMv2ld89orl/kZ5gBryXDU0+f/1/+TPJv/jJOt/XbeQMFeno/fBtfP+K6LHfasPka9b1i8BeorgWBwAAA=="/>
+   </div>
+   <script type="text/javascript">
+    if (typeof Sys.Extended != 'undefined' && typeof Sys.Extended.UI.TabContainer != "undefined") {
+            Sys.Extended.UI.TabContainer.prototype._app_onload = function (sender, e) {
+                if (this._cachedActiveTabIndex != -1) {
+                    this.set_activeTabIndex(this._cachedActiveTabIndex);
+                    this._cachedActiveTabIndex = -1;
+
+                    var activeTab = this.get_tabs()[this._activeTabIndex];
+                    if (activeTab) {
+                        activeTab._wasLoaded = true;
+                        //activeTab._setFocus(activeTab); -- disable focus on active tab in the last TabContainer
+                    }
+                }
+                this._loaded = true;
+            }
+        }
+
+        var colorlessSupport = false;
+   </script>
+   <div class="up-loader">
+   </div>
+   <div class="lightbox-background" style="display:none">
+   </div>
+   <!--[if IE 9]>            
+    <script type="text/javascript">
+        function attachPIE(){     
+            $('a.button, a.button-sm, a.button-search, a.button-icon, .toolbar, .search-bar, .dropdownlist, .page-nummeric-button, .page-navigation-button, .homepage-title, .custom-message, .button-unrecommend, .contact-person-data-button, .toolbar-grey, .button-hook').each(function () { try { PIE.attach(this); } catch(e){ console.log(e); } });
+        }
+        $(document).ready(function () { attachPIE(); });
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(attachPIE);
+    </script>
+    <![endif]-->
+   <?if (!IE)|(gt IE 8)?>
+   <script type="text/javascript">
+    // On window load. This waits until images have loaded which is essential
+        $(window).load(function () {
+            colorlessSupport = true;
+        });
+   </script>
+   <?endif?>
+   <script type="text/javascript">
+    $(window).load(function () {
+            loadPartnersCarousel(colorlessSupport);
+        });
+   </script>
+   <!--[if lte IE 8]>
+    <script type="text/javascript">
+        var isLteIE8 = true;
+        $(window).load(function () {
+            if($('.partner-logos').length > 0){
+                $('.partner-logos').css('visibility', 'visible');
+            }
+        });
+    </script>
+    <![endif]-->
+   <script type="text/javascript">
+    function setFooterToBottom() {
+            if (typeof siteContainerMoveFooter == "undefined") {
+                siteContainerMoveFooter = true; // true by default
+            }
+
+            if (siteContainerMoveFooter) { //typeof doNotMoveFooter == "undefined" || (typeof doNotMoveFooter != "undefined" && doNotMoveFooter != false)) {
+                $('.footer').css('margin-top', '40px');
+
+                var body = document.body;
+                var html = document.documentElement;
+                var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+                var contentHeight = $('.footer').offset().top + $('.footer').height();
+
+                if (height > contentHeight) {
+                    var marginTop = parseInt($('.footer').css('margin-top'));
+
+                    var extra = (height - contentHeight) + 40;
+                    $('.footer').css('margin-top', extra + "px");
+                }
+            }
+            else {
+                $(".footer").removeClass("margin-top40");
+            }
+        }
+
+        $.extend({
+            getUrlVars: function () {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    if (hashes[i].indexOf("http://") > -1 || hashes[i].indexOf("https://") > -1) {
+                        continue;
+                    }
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            },
+            getUrlVar: function (name) {
+                return $.getUrlVars()[name];
+            }
+        });
+
+        function setTabIndex(activeTab, urlVarsCount) {
+            if (history.pushState && history.replaceState) {
+                var currentLocation = window.location.toString();
+
+                if (urlVarsCount == 0) {
+                    history.replaceState(null, null, currentLocation + "?tab=" + activeTab);
+                    urlVarsCount++;
+                }
+                else if (typeof $.getUrlVar("tab") == "undefined") {
+                    history.replaceState(null, null, currentLocation + "&tab=" + activeTab);
+                    urlVarsCount++;
+                }
+                else if (urlVarsCount == 1) {
+                    var cleanLocation = currentLocation.replace("?tab=" + $.getUrlVar("tab"), "")
+                    history.replaceState(null, null, cleanLocation + "?tab=" + activeTab);
+                }
+                else {
+                    var cleanLocation = currentLocation.replace("&tab=" + $.getUrlVar("tab"), "")
+                    history.replaceState(null, null, cleanLocation + "&tab=" + activeTab);
+                }
+            }
+            return urlVarsCount;
+        }
+
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function (obj, start) {
+                for (var i = (start || 0), j = this.length; i < j; i++) {
+                    if (this[i] === obj) { return i; }
+                }
+                return -1;
+            }
+        }
+
+        function showUpdateProgress() {
+            $('.lightbox-loading').css('display', 'block');
+        }
+
+        function hideUpdateProgress() {
+            $('.lightbox-loading').css('display', 'none');
+        }
+
+        function showPanelLoader(pnlClientID) {
+            if (typeof pnlClientID != "undefined" && ($(pnlClientID).hasClass("loader-white") ||
+                    $(pnlClientID).hasClass("loader-grey") || $(pnlClientID).hasClass("loader-list"))) {
+                var loader = $(".up-loader").clone();
+                loader.removeClass("original");
+                loader.width($(pnlClientID).outerWidth(false));
+                loader.height($(pnlClientID).outerHeight(false));
+
+                if ($(".sticky-bar").length > 0 && $(".sticky-bar").is(":visible")) {
+                    stickyBarZIndex = parseInt($(".sticky-bar").css("z-index"));
+                    loaderOldZIndex = parseInt(loader.css("z-index"));
+                    if (loaderOldZIndex != "undefined" && loaderOldZIndex >= stickyBarZIndex) {
+                        loader.css("z-index", stickyBarZIndex - 1);
+                    }
+                }
+
+                if ($(pnlClientID).hasClass("loader-white")) {
+                    $(loader).css("background-color", "#fff");
+                }
+                else if ($(pnlClientID).hasClass("loader-grey")) {
+                    $(loader).css("background-color", "#eee");
+                }
+                else if ($(pnlClientID).hasClass("loader-list")) {
+                    $(loader).css("background-color", "#eee");
+                    $(loader).css("background-image", "none");
+                }
+
+                if ($(pnlClientID).hasClass("loader-position-calc")) {
+                    SetLoaderPositionInVisibleArea(pnlClientID, loader);
+                }
+
+                if (pnlClientID.indexOf('upTabObjects') > 0 && $(pnlClientID).height() > 80) {
+                    $(loader).css("background-position", "center 80px");
+                }
+
+                if (!$(pnlClientID).hasClass('loader-no-position')) {
+                    $(pnlClientID).addClass("position-relative");
+                }
+                $(pnlClientID).append(loader);
+                $(loader).show();
+            }
+        }
+
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function (sender, args) {
+            var asyncTrg = sender._postBackSettings.asyncTarget; //always asaign value to local var
+            var upClientID;
+            if (sender._postBackSettings.panelsToUpdate != null) {
+                for (var i = 0; i < sender._postBackSettings.panelsToUpdate.length; i++) {
+                    upClientID = "#" + sender._updatePanelClientIDs[sender._updatePanelIDs.indexOf(sender._postBackSettings.panelsToUpdate[i])];
+                    showPanelLoader(upClientID);
+                }
+            }
+            if (asyncTrg != '') {
+                sender.add_endRequest(function (s, a) {
+                    siteContainer_endRequest(s, a, asyncTrg);
+                });
+            }
+        });
+
+        function siteContainer_endRequest(sender, args, asyncTrg) {
+            sender.remove_endRequest(siteContainer_endRequest.caller); // Unhook this handler from the PageRequestManager            
+            bindLtGtEscapeToTextFields();
+        }
+
+        $(window).load(function () { setFooterToBottom();});
+
+        $(document).ready(function () {
+            bindLtGtEscapeToTextFields();
+        });
+   </script>
+   <div class="header-bg">
+    <div class="page">
+     <header class="header copytext-link">
+      <div id="upHeaderActions">
+       <section class="grid-span6 grid-first position-relative header-title">
+        <a href="https://www.xpertio.net/" id="hlTitle" onclick="deleteCookie();">
+         <img alt="" src="/images/xpertio_logo.png"/>
+        </a>
+        <span id="lbCityName">
+         Deutschland
+        </span>
+       </section>
+       <div class="grid-span11">
+        <ul class="header-nav horizontally-redistributed-children margin-top25">
+         <li>
+          <a class="search-companies-link" href="/unternehmen" id="hlHeaderSearchCompanies">
+           Unternehmen
+          </a>
+         </li>
+         <li>
+          <a class="search-projects-link" href="/projekte" id="hlHeaderSearchProjects">
+           Projekte
+          </a>
+         </li>
+         <li>
+          <a class="search-persons-link" href="/personen" id="hlHeaderSearchPersons">
+           Personen
+          </a>
+         </li>
+         <li>
+          <a href="https://www.xpertio.net/cms/" id="hlHeaderBlog">
+           Magazin
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="grid-span7">
+        <div class="grid-span5 grid-indent2 grid-first">
+         <div class="anonymous-header margin-top20 horizontally-redistributed-children" id="pnlAnonymousHeader">
+          <a class="button-grey button-sm" href="/login?ReturnUri=%2farchitekten-goeken-henckel-gbr_oldenburg%2f10%2f16145" id="hlLogin" rel="nofollow">
+           Einloggen
+          </a>
+          <a class="button-blue button-sm" href="/registrieren" id="hlRegister" rel="nofollow">
+           Registrieren
+          </a>
+         </div>
+        </div>
+        <div class="clear">
+        </div>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+      <div class="clear">
+      </div>
+     </header>
+    </div>
+   </div>
+   <div class="green-line">
+   </div>
+   <div class="page">
+    <section class="main">
+     <div class="sticky-bar" id="cphContainer_cphMain_ctl00_pnlStickyBar" style="display:none">
+      <div class="sticky-bar-bg">
+      </div>
+      <div class="sticky-bar-inner silent-link display-table" style="display:none; vertical-align: middle;">
+       <div style="display: table-cell;">
+        <p class="float-left">
+         Registrieren und profitieren: xpertio.net bringt Sie online weiter.
+        </p>
+       </div>
+       <div class="display-cell" style="vertical-align: middle;">
+        <a class="button button-grey float-right" href="/registrieren" id="cphContainer_cphMain_ctl00_hlRegister">
+         Jetzt kostenlos registrieren
+        </a>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+      <script type="text/javascript">
+       $("#cphContainer_cphMain_ctl00_pnlStickyBar").showOnScroll(70, 200, 'False');
+        $("#cphContainer_cphMain_ctl00_hlRegister").click(function () {
+            gaqPushClick("Registration", "PP_sticky_bar_register");
+        });
+        $("#cphContainer_cphMain_ctl00_hlPersonEdit").click(function () {
+            gaqPushClick("Registration", "sticky_bar_click_enter_name_btn");
+        });
+        $("#cphContainer_cphMain_ctl00_hlCloseCookiesSticky").click(function () {
+            $("#cphContainer_cphMain_ctl00_pnlStickyBar").remove();
+            $.cookie('CookiesStickyState', 'True', { expires: 3650 });// 10 years
+        });
+      </script>
+     </div>
+     <div class="toolbar copytext-link" id="cphContainer_cphMain_wvCustomToolbar_pnlToolbar">
+      <ul class="toolbar-links">
+       <li class="float-left">
+        <div class="clear">
+        </div>
+        <a href="../../" id="cphContainer_cphMain_wvCustomToolbar_hlNewSearch" onmouseout="document.getElementById(this.id.replace('hlNewSearch', 'imgSearch')).style.display='block';document.getElementById(this.id.replace('hlNewSearch', 'imgSearchHover')).style.display='none';" onmouseover="document.getElementById(this.id.replace('hlNewSearch', 'imgSearch')).style.display='none';document.getElementById(this.id.replace('hlNewSearch', 'imgSearchHover')).style.display='block';">
+         <span class="margin-top20 float-left">
+          <img id="cphContainer_cphMain_wvCustomToolbar_imgSearch" src="../../images/toolbar/icon_20_search.png" style="display:block;"/>
+          <img id="cphContainer_cphMain_wvCustomToolbar_imgSearchHover" src="../../images/toolbar/icon_20_search_hover.png" style="display:none;"/>
+         </span>
+         <span class="button-new-search" id="cphContainer_cphMain_wvCustomToolbar_lbNewSearch">
+          Neue Suche
+         </span>
+        </a>
+       </li>
+      </ul>
+      <div class="float-right toolbar-print">
+       <a class="button-print" href="../../print/architekten-goeken-henckel-gbr_oldenburg/10/16145/xpertio_architekte_oldenburg" id="cphContainer_cphMain_wvCustomToolbar_hlPrint" rel="nofollow" target="_blank">
+       </a>
+      </div>
+      <div class="float-right toolbar-share padding-left20 padding-right20">
+       <a class="button-share" id="cphContainer_cphMain_wvCustomToolbar_hlShare">
+        Teilen
+       </a>
+       <div class="share-dropdown content-box">
+        <a class="share_mailto" href="mailto:?subject=xpertio.net - Architekten G%c3%b6ken %2b Henckel GbR&amp;body=%0d%0aInteressantes Profil bei xpertio.net gefunden%3a%0d%0a%0d%0ahttps%3a%2f%2fwww.xpertio.net%2farchitekten-goeken-henckel-gbr_oldenburg%2f10%2f16145" id="cphContainer_cphMain_wvCustomToolbar_AddThisButtonMailTo">
+         E-Mail
+        </a>
+        <a class="addthis_button_facebook">
+         Facebook
+        </a>
+        <a class="addthis_button_google_plusone_share">
+         Google+
+        </a>
+        <a addthis:title="Architekten Göken + Henckel GbR" class="addthis_button_twitter" id="cphContainer_cphMain_wvCustomToolbar_AddThisButtonTwitter">
+         Twitter
+        </a>
+        <a addthis:title="Architekten Göken + Henckel GbR" class="addthis_button_linkedin" id="cphContainer_cphMain_wvCustomToolbar_AddThisButtonLinkedIn">
+         LinkedIn
+        </a>
+        <a class="addthis_button_xing">
+         Xing
+        </a>
+       </div>
+      </div>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51de679037f0110b" type="text/javascript">
+      </script>
+      <script type="text/javascript">
+       var addthis_config = { "data_track_clickback": false };
+
+        $(".toolbar-share").hover(
+            function () {
+                $(".button-share").css("background-position", "0 -18px");
+            },
+            function () {
+                $(".button-share").css("background-position", "0 0");
+            }
+        );
+        
+        var shareAnimInPorgress = false;
+        $('.toolbar-share, .share-dropdown').hover(
+            function () {
+                if (!shareAnimInPorgress) {
+                    shareAnimInPorgress = true;
+                    $('.share-dropdown', this).slideDown(200, function () { shareAnimInPorgress = false });
+                }
+            },
+            function () {
+                shareAnimInPorgress = true;
+                $('.share-dropdown', this).stop(true, true).slideUp(200, function () { shareAnimInPorgress = false });
+            }
+        );
+      </script>
+      <div class="float-right margin-left20 margin-right20">
+      </div>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="clear">
+     </div>
+     <script type="text/javascript">
+      Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function (sender, args) {
+        var asyncTrg = sender._postBackSettings.asyncTarget;
+        
+        sender.add_endRequest(function (s, a) {
+            custToolbar_endRequest(s, a, asyncTrg);
+        });
+    });
+
+    function custToolbar_endRequest(sender, args, asyncTrg) {
+        sender.remove_endRequest(custToolbar_endRequest.caller); // Unhook this handler from the PageRequestManager
+
+        hideUpdateProgress();
+     }
+
+     $("#cphContainer_cphMain_wvCustomToolbar_btnBackToResults").click(function() {
+        if($("#cphContainer_cphMain_wvCustomToolbar_hfSearchData").length > 0) {
+            
+            var cookieSettings = {
+                domain: 'www.xpertio.net',
+                expires: 1,
+                path: '/'
+            }
+
+            $.cookie("QueryData", $("#cphContainer_cphMain_wvCustomToolbar_hfSearchData").val(), cookieSettings);
+            $.cookie("LogoCityName", $("#cphContainer_cphMain_wvCustomToolbar_hfLogoCityName").val(), cookieSettings);
+        }
+     });
+
+    function showPageLoader() {
+        if (ieVersion > 9) {
+            showUpdateProgress();
+        }
+    }
+     </script>
+     <div class="breadcrumb silent-link opacity85" id="cphContainer_cphMain_wvCustomBreadcrumb_pnlBreadCrumb">
+      <ul>
+       <li>
+        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$wvCustomBreadcrumb$btnHome", "", true, "", "", false, true))' id="cphContainer_cphMain_wvCustomBreadcrumb_btnHome">
+         Startseite
+        </a>
+       </li>
+       <li class="breadcrumb-separator">
+        &gt;
+       </li>
+       <li id="cphContainer_cphMain_wvCustomBreadcrumb_liCity">
+        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$wvCustomBreadcrumb$btnCity", "", true, "", "", false, true))' id="cphContainer_cphMain_wvCustomBreadcrumb_btnCity">
+         Oldenburg
+        </a>
+       </li>
+       <li class="breadcrumb-separator" id="cphContainer_cphMain_wvCustomBreadcrumb_liCitySeparator">
+        &gt;
+       </li>
+       <li id="cphContainer_cphMain_wvCustomBreadcrumb_liType">
+        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$wvCustomBreadcrumb$btnType", "", true, "", "", false, true))' id="cphContainer_cphMain_wvCustomBreadcrumb_btnType">
+         Architekt / Planer
+        </a>
+        <input id="cphContainer_cphMain_wvCustomBreadcrumb_hfRoleID" name="ctl00$ctl00$cphContainer$cphMain$wvCustomBreadcrumb$hfRoleID" type="hidden" value="10"/>
+       </li>
+       <li class="breadcrumb-separator" id="cphContainer_cphMain_wvCustomBreadcrumb_liTypeSeparator">
+        &gt;
+       </li>
+       <li>
+        Architekten Göken + Henckel GbR
+       </li>
+      </ul>
+      <section class="clear">
+      </section>
+     </div>
+    </section>
+   </div>
+   <div class="text-align-center margin-top40" id="cphContainer_cphMain_pnlNoProfileImage">
+   </div>
+   <div class="page">
+    <section class="main">
+     <div class="grid-span24 grid-first" style="display:table; margin-top: -130px">
+      <section class="grid-span16 grid-first margin-top40" id="cphContainer_cphMain_cBusinessCard_secBusinessCardGridSpan">
+       <section class="business-card">
+        <section class="grid-span16 grid-first" id="cphContainer_cphMain_cBusinessCard_secTitle">
+         <section class="padding-left20 padding-right20">
+          <header class="business-card-title">
+           Architekt / Planer
+          </header>
+          <h1 class="h2">
+           Architekten Göken + Henckel GbR
+          </h1>
+          <h2 class="h4 margin-top10" id="cphContainer_cphMain_cBusinessCard_h4AccountName2">
+           Architekten BDA
+          </h2>
+          <div class="empty-line40" id="cphContainer_cphMain_cBusinessCard_divEmptyLine">
+          </div>
+          <span class="business-card-address" id="cphContainer_cphMain_cBusinessCard_lbAddress">
+           Gartenstr. 22a - 26122 Oldenburg
+          </span>
+         </section>
+         <input id="cphContainer_cphMain_cBusinessCard_hfShowMapPin" name="ctl00$ctl00$cphContainer$cphMain$cBusinessCard$hfShowMapPin" type="hidden"/>
+         <input id="cphContainer_cphMain_cBusinessCard_hfGeoLatitude" name="ctl00$ctl00$cphContainer$cphMain$cBusinessCard$hfGeoLatitude" type="hidden" value="53,13418"/>
+         <input id="cphContainer_cphMain_cBusinessCard_hfGeoLongitude" name="ctl00$ctl00$cphContainer$cphMain$cBusinessCard$hfGeoLongitude" type="hidden" value="8,20569"/>
+         <input id="cphContainer_cphMain_cBusinessCard_hfName" name="ctl00$ctl00$cphContainer$cphMain$cBusinessCard$hfName" type="hidden"/>
+         <input id="cphContainer_cphMain_cBusinessCard_hfAddress" name="ctl00$ctl00$cphContainer$cphMain$cBusinessCard$hfAddress" type="hidden"/>
+        </section>
+        <div class="clear">
+        </div>
+        <div class="margin-top10">
+         <section class="grid-span10 grid-first">
+         </section>
+         <div class="grid-span6 text-align-right">
+         </div>
+         <div class="claim-ownership" id="cphContainer_cphMain_cBusinessCard_pnlClaimOwership">
+          <span class="copytext14 display-block" id="cphContainer_cphMain_cBusinessCard_lbClaimOwnership">
+           Ist das Ihr Unternehmen?
+          </span>
+          <a class="button-sm button-grey margin-top10" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$cBusinessCard$btnClaimOwnership", "", true, "", "../../registrieren/1/16145", false, true))' id="cphContainer_cphMain_cBusinessCard_btnClaimOwnership">
+           Dieses Profil verwalten
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </div>
+        <div class="clear">
+        </div>
+       </section>
+      </section>
+      <script type="text/javascript">
+       // Bind Imprint link click
+    if ($("#cphContainer_cphMain_cBusinessCard_hlImprint").length > 0) {
+        $("#cphContainer_cphMain_cBusinessCard_hlImprint").click(function (ev) {
+            ev.preventDefault();
+            showLightBoxCentered("popup-imprint");
+        });
+    }
+      </script>
+      <div style="display:table-cell;vertical-align:bottom;">
+       <section class="partner-logos grid-span8">
+        <div id="partnersLogosCarousel">
+         <div class="wrapper">
+         </div>
+        </div>
+        <a href="#" id="partners-carousel-prev">
+        </a>
+        <a href="#" id="partners-carousel-next">
+        </a>
+        <div class="logo-tooltip">
+         <div class="logo-tooltip-inner">
+         </div>
+        </div>
+       </section>
+      </div>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="actionbar-buttons grid-span24 grid-first" id="cphContainer_cphMain_pnActionBar" style="padding-bottom: 0">
+      <span>
+      </span>
+      <script id="scrGoogleAnalytics" type="text/javascript">
+       $("#cphContainer_cphMain_btnRecommend_btnRecommend").click(function () {
+        if (!$(this).hasClass("show-selection")) {
+            if ($(this).hasClass("button-recommend") && !$(this).hasClass("not-logged")) {
+                gaqPushClick('Action', 'add_recommendation');
+            }
+            else if ($(this).hasClass("button-unrecommend")) {
+                gaqPushClick('Action', 'remove_recommendation');
+            }
+        }
+    });
+      </script>
+      <script id="scrRecommend" type="text/javascript">
+       // Recommend button logic
+    $('#cphContainer_cphMain_btnRecommend_btnRecommend').click(function (event) {
+        if(!disableIfIsInactiveButton($(this))) {
+            return false;
+        }
+
+        var canRecommend = "False" === 'True';
+
+        if (!$(this).hasClass('not-logged') && canRecommend) {
+            if ($(this).hasClass('show-selection')) {
+                event.preventDefault();
+                openAccountSelectionByControlID('cphContainer_cphMain_btnRecommend_casRecommendation');
+            }
+            else {
+                if ($(this).hasClass('button-recommend')) {
+                    $(this).removeClass('button-recommend');
+                    $(this).addClass('button-unrecommend');
+                    $(this).html('Empfohlen');
+                }
+                else {
+                    $(this).removeClass('button-unrecommend');
+                    $(this).removeAttr('style');
+                    $(this).addClass('button-recommend');
+                    $(this).html('Empfehle ich');
+                }
+            }
+            openTab(3);
+            //openTab(3);
+        }
+    });
+
+    $('#cphContainer_cphMain_btnRecommend_btnRecommend').hover(
+        function () {
+            if ($(this).hasClass('button-unrecommend')) {
+                $(this).width($(this).width());
+                $(this).html('Entfernen');
+            }
+        },
+        function () {
+            if ($(this).hasClass('button-unrecommend')) {
+                $(this).removeAttr('style');
+                $(this).html('Empfohlen');
+            }
+        }
+    );
+      </script>
+      <div class="float-left" id="cphContainer_cphMain_cAddRemoveFavorite_upButtonFavorite">
+       <a class="button button-grey button-favorite float-left" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$btnAddRemoveFavorite", "", true, "", "", false, true))' id="cphContainer_cphMain_cAddRemoveFavorite_btnAddRemoveFavorite" onclick="return showPopupAddOrRemoveFavorite(this);">
+        Beobachten
+       </a>
+       <a class="favorite-arrow">
+       </a>
+       <a class="favorite-count" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$btnFavoriteCounter", "", true, "", "", false, true))' id="cphContainer_cphMain_cAddRemoveFavorite_btnFavoriteCounter">
+        0
+       </a>
+       <div class="clear">
+       </div>
+      </div>
+      <div class="loader-white" id="cphContainer_cphMain_cAddRemoveFavorite_upAddFavorite">
+       <span>
+        <div class="popup-save-favorite" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_pnlSaveFavorite" style="display: none;">
+         <div class="grid-span12 grid-first close-confirm-popup close-confirm-popup-overflowed radius">
+          <div class="content-box radius">
+           <div class="radius-top" style="overflow:hidden">
+            <div class="toolbar radius width100" style="overflow: hidden">
+             <h3 class="padding-left20 padding-top20 display-inline-block popup-title">
+             </h3>
+             <div class="toolbar-close float-right margin-right60 dropdownlist-separator">
+              <a onclick="closeSaveFavoritePopup('popup-save-favorite');">
+              </a>
+              <img alt="x" class="display-none" src="../../images/toolbar/close_hover.png"/>
+             </div>
+            </div>
+           </div>
+           <div class="grid-span10 grid-first padding-top20 padding-right40 padding-bottom40 padding-left40">
+            <span class="custom-message padding-vertical15 max-favorite-error custom-message-error" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_cmMaxFavoritesInCategoryError_lb" style="display:block">
+             <span class="custom-message-img custom-message-icon custom-message-icon-error display-inline-block float-left">
+             </span>
+             <span class="font-bold display-inline-block float-left">
+              Fehler -
+             </span>
+             <span class="display-inline-block float-left" style="width:270px">
+              Sie haben schon die maximale Anzahl an Favoriten gespeichert.
+             </span>
+             <a class="custom-message-img custom-message-close custom-message-close-error" onclick='this.parentNode.className="display-none";'>
+             </a>
+             <span class="display-block clear">
+             </span>
+            </span>
+            <div class="margin-top20">
+             <div class="grid-span3 grid-first text-align-right">
+              <span class="copytext small-input-label">
+               Vorschau
+              </span>
+             </div>
+             <div class="grid-span7">
+              <input id="hfCurrentFavoriteCategory" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$hfCurrentFavoriteCategory" type="hidden" value="-1"/>
+              <div class="home-projects content-box display-inline-block margin-top10 margin-left0" id="divFavoriteItemPreview">
+               <div class="favorite-img">
+                <img id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_imgFavorite" src=""/>
+               </div>
+               <p class="item-project-name-small copytext-bold">
+               </p>
+               <p class="item-project-name-small item-project-address copytext">
+               </p>
+              </div>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="margin-top20">
+             <div class="grid-span3 grid-first text-align-right">
+              <span class="copytext small-input-label">
+               Sichtbarkeit
+              </span>
+             </div>
+             <div class="grid-span7 checkbox-container">
+              <input id="chkIsPrivate" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$chkIsPrivate" type="checkbox"/>
+              <label for="chkIsPrivate">
+               Nur für mich sichtbar
+              </label>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="margin-top20">
+             <div class="grid-span3 grid-first text-align-right">
+              <span class="copytext small-input-label">
+               Kategorie
+              </span>
+             </div>
+             <div class="grid-span7">
+              <select class="custom-dropdown-small custom-dropdown-width100" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_csProfileCategories_ddlCustomSelect" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$csProfileCategories$ddlCustomSelect">
+              </select>
+              <input id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_csProfileCategories_hfInitialValue" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$csProfileCategories$hfInitialValue" type="hidden"/>
+              <script type="text/javascript">
+               loadCustomSelectControl("cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_csProfileCategories_ddlCustomSelect", 0);
+              </script>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="margin-top10" id="secNewFavCategory">
+             <div class="grid-span3 grid-first text-align-right">
+              <span class="copytext small-input-label" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_lbNewFavCategoryName">
+               Kategoriename
+              </span>
+             </div>
+             <div class="grid-span7">
+              <input class="width100 custom-input custom-input-small" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_tbNewFavCategoryName" maxlength="50" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$tbNewFavCategoryName" type="text"/>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="margin-top20">
+             <div class="grid-span3 grid-first">
+             </div>
+             <div class="grid-span7 text-align-right">
+              <a class="button-sm button-grey margin-right10" onclick="closeSaveFavoritePopup('popup-save-favorite');">
+               Abbrechen
+              </a>
+              <a class="button-sm button-blue" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$btnSaveFavorite", "", true, "vgAddNewFavCategory", "", false, true))' id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_btnSaveFavorite" onclick="return checkNewFavCategoryName(this);">
+               Speichern
+              </a>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+           <div class="clear">
+           </div>
+          </div>
+         </div>
+        </div>
+        <input id="hfMaxFavoritesInCategory" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$cSaveFavoriteDialog$hfMaxFavoritesInCategory" type="hidden" value="100"/>
+        <div class="display-none" id="cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_pnlCategorySizes">
+        </div>
+       </span>
+       <script type="text/javascript">
+        function getCsfdDropDownSelector() {
+        return "#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_csProfileCategories_ddlCustomSelect";
+    }
+
+    function closeSaveFavoritePopup(popupClass) {
+        closeLightBoxAndPopup(popupClass);
+        clearTextBoxes(popupClass);
+        reloadDefaultSelectedValue();
+    }
+
+    // Preset in drop down selected category text and id from default
+    function reloadDefaultSelectedValue() {
+        var dropdownRootIdSelector = getCsfdDropDownSelector().replace("ddlCustomSelect", "");
+
+        if (typeof $(dropdownRootIdSelector + 'ddlCustomSelect').get(0) == "undefined") {
+            return false;
+        }
+
+        var initialValue = $(dropdownRootIdSelector + 'hfInitialValue').val();
+        $(dropdownRootIdSelector + 'ddlCustomSelect').val(initialValue);
+       
+        $(dropdownRootIdSelector + 'ddlCustomSelect').change();
+    }
+
+    function showSaveFavoritePopup(popupClass) {
+        if ($("." + popupClass).length > 0) {
+            openSaveFavoritePopup(popupClass,false);
+        }
+    }
+    function showEditAndSaveFavoritePopup(popupClass) {
+        if ($("." + popupClass).length > 0) {
+            openSaveFavoritePopup(popupClass,true);
+        }
+    }
+    
+    function openSaveFavoritePopup(popupClass, inEdit) {
+        $('.' + popupClass + ' .up-loader').remove();
+        $("#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_cmMaxFavoritesInCategoryError" + '_lb').hide();
+        showNewFavCategoryInput(false);
+        loadEventSelectFavCategory();
+        favoriteCategorySelection(getCsfdDropDownSelector());
+        if (inEdit) {
+            $('#hfCurrentFavoriteCategory').val($(getCsfdDropDownSelector()).val());
+        }
+        showLightBox('.' + popupClass, true);
+    }
+
+    function loadEventSelectFavCategory() {
+        $(getCsfdDropDownSelector()).change(function () {
+            favoriteCategorySelection(getCsfdDropDownSelector());
+        });
+    }
+
+    function favoriteCategorySelection(dropdownIdSelector) { 
+        if ($(dropdownIdSelector).val() == "0") {
+            showNewFavCategoryInput(true);
+            var $confirmBtn = $("#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_btnSaveFavorite");
+            if (($confirmBtn).hasClass('aspNetDisabled')) {
+                ($confirmBtn).removeClass('aspNetDisabled');
+            }
+        }
+        else {
+            showNewFavCategoryInput(false);
+            checkFavCategorySize($(dropdownIdSelector).val());
+        }
+    }
+
+    function showNewFavCategoryInput(state) {
+        $("#secNewFavCategory .custom-input").val('');
+        $("#secNewFavCategory .error-text").hide(); // hide custom validators
+        if (state) {
+            $("#secNewFavCategory").show();
+            $("#secNewFavCategory .custom-input").focus();
+        }
+        else {
+            $("#secNewFavCategory").hide();
+        }
+    }
+
+    function validateNewFavCategoryName(sender, args) {
+        var isValid = true;
+        if ($("#secNewFavCategory").is(':visible')) {
+            var tbNewFavCategoryName = document.getElementById(sender.id.replace('cvNewFavCategoryName', 'tbNewFavCategoryName')).value;
+            if (tbNewFavCategoryName.length == 0) {
+                isValid = false;
+            }
+        }
+        args.IsValid = isValid;
+    }
+
+    function checkNewFavCategoryName(sender) {
+        if (typeof (Page_ClientValidate) == 'function') {
+            var isPageValid = Page_ClientValidate('vgAddNewFavCategory');
+            if (isPageValid) {
+                if (!$(sender).hasClass('aspNetDisabled') || isCurrentFavCategory()) {                
+                    showPopupLoader("cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_pnlSaveFavorite");
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    function isCurrentFavCategory() {
+        var selCatId = $(getCsfdDropDownSelector()).val();
+        var currCatId = $('#hfCurrentFavoriteCategory').val();
+
+        return (selCatId == currCatId);
+    }
+
+    function checkFavCategorySize(favCat_id) {
+        var hfSelCatSize = 'hfFavCategorySize' + favCat_id;
+        var $confirmBtn = $("#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_btnSaveFavorite");
+
+        if (document.getElementById(hfSelCatSize) != null) 
+        {
+            if (parseInt( $('#'+ hfSelCatSize).val() ) >= parseInt( $('#hfMaxFavoritesInCategory').val()) ) {
+                $("#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_cmMaxFavoritesInCategoryError" + '_lb').show();
+                if (!($confirmBtn).hasClass('aspNetDisabled')) {
+                   ($confirmBtn).addClass('aspNetDisabled');
+                }
+            }
+            else {
+                $("#cphContainer_cphMain_cAddRemoveFavorite_cSaveFavoriteDialog_cmMaxFavoritesInCategoryError" + '_lb').hide();
+                if (($confirmBtn).hasClass('aspNetDisabled')) {
+                    ($confirmBtn).removeClass('aspNetDisabled');
+                }
+            }
+        }
+    }
+
+    function showPageLoader() {
+        if (ieVersion > 9) {
+            showUpdateProgress();
+        }
+    }
+       </script>
+       <span>
+       </span>
+       <input id="hfFavorite" name="ctl00$ctl00$cphContainer$cphMain$cAddRemoveFavorite$hfFavorite" type="hidden"/>
+      </div>
+      <div class="loader-white" id="cphContainer_cphMain_cAddRemoveFavorite_upFavoritesPopup">
+       <span>
+       </span>
+       <script type="text/javascript">
+        function showPersonsPopupOnEndRequest(btnID, className, asyncTrg) {
+        if (asyncTrg != null && asyncTrg.indexOf(btnID) > 0) {
+            showLightBoxCentered(className);
+            setInactiveButtonsStateOnClick("." + className, ".button-sm");
+        }
+    }
+       </script>
+      </div>
+      <script type="text/javascript">
+       Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function (sender, args) {
+        var asyncTrg = sender._postBackSettings.asyncTarget;
+        if (asyncTrg != null) {
+            var upClientID = "#cphContainer_cphMain_cAddRemoveFavorite_cpFavoritesPersons";
+
+            if (asyncTrg.indexOf("btnFavoriteCounter") > 0) {
+               
+                if (typeof $(upClientID) != "undefined" && $(upClientID).hasClass("loader-white")) {
+
+                    var loader = $(".up-loader").clone();
+
+                    loader.width($(upClientID).outerWidth(false));
+                    loader.height($(upClientID).outerHeight(false));
+
+                    $(loader).css("background-color", "#fff");
+                    $(upClientID).addClass("position-relative");
+
+                    $(upClientID).append(loader);
+                    $(loader).show();
+                }
+            }
+        }
+        sender.add_endRequest(function (s, a) {
+            custFavButton_endRequest(s, a, asyncTrg);
+        });
+    });
+
+    function custFavButton_endRequest(sender, args, asyncTrg) {
+        sender.remove_endRequest(custFavButton_endRequest.caller); // Unhook this handler from the PageRequestManager
+
+        hideUpdateProgress();
+
+        if(asyncTrg != null) {            
+            if (asyncTrg.indexOf("btnSaveFavorite") > 0) {
+                var btnAddFavorite = $("#cphContainer_cphMain_cAddRemoveFavorite_btnAddRemoveFavorite");
+
+                // if the profile is added as favorite then show a green tooltip with "my profile" link. The this green tooltip is fade out after 5 seconds
+                if (btnAddFavorite.hasClass("state-added")) {
+
+                    closeSaveFavoritePopup('popup-save-favorite');
+                    gaqPushClick('PersonProfile', 'Person_Added_Favorite');
+                }
+            }
+            else if (asyncTrg.indexOf("btnPreviousFavorites") > 0 || asyncTrg.indexOf("btnNextFavorites") > 0) {
+                showLightBox('.popup-favorites-list', true);
+            }
+            else if (asyncTrg.indexOf("cmPopupDelFavorite") > 0) {
+                closeLightBoxAndPopup('popup-delete-favorite');
+            }
+
+            showPersonsPopupOnEndRequest('btnFavoriteCounter', 'popup-favorites-list', asyncTrg); // function in CustomCompanyEmployeesView.ascx
+        }
+     }
+
+     $(document).ready(function () {
+        if("False" == "True") {
+            showSaveFavoritePopup('popup-save-favorite');
+        }
+     });
+
+     $(document).on("mouseenter", ".button-favorite.state-added", function () {
+         if (!$(this).hasClass("button-favorite-no-hover")) {
+             $(this).html('<span class="icon-x-mark favorite-icon"></span>Entfernen');
+         }
+     });
+     $(document).on("mouseleave", ".button-favorite.state-added", function () {
+         if (!$(this).hasClass("button-favorite-no-hover")) {
+             $(this).html('<span class="icon-check favorite-icon"></span>Beobachtet');
+         }
+     });
+
+     function showPopupAddOrRemoveFavorite(sender) {
+         if (!disableIfIsInactiveButton(sender)) {
+             return false;
+         }
+
+         if ("False" == "False" && "False" == "True") {
+             if ($("#cphContainer_cphMain_cAddRemoveFavorite_btnAddRemoveFavorite").hasClass("state-added")) {
+                 showSaveFavoritePopup('popup-delete-favorite');
+             }
+             else {
+                 showSaveFavoritePopup('popup-save-favorite');
+             }
+         }
+    }
+      </script>
+      <div class="float-left" style="margin-left: 7px;">
+      </div>
+      <div class="clear">
+      </div>
+     </div>
+     <section class="grid-span16 grid-first">
+      <section class="tab-navigation" id="cphContainer_cphMain_secTabsContainer">
+       <a href="#" id="hlAnchorTabTop">
+       </a>
+       <div class="display-block margin-top20" id="cphContainer_cphMain_Tabs">
+        <div class="ajax__tab_header" id="cphContainer_cphMain_Tabs_header">
+         <span class="ajax__tab" id="cphContainer_cphMain_Tabs_Tab1_tab">
+          <span class="ajax__tab_outer">
+           <span class="ajax__tab_inner">
+            <a class="ajax__tab_tab" href="#" id="__tab_cphContainer_cphMain_Tabs_Tab1">
+             <span>
+              <div class="ajax_tab_first">
+               <span id="cphContainer_cphMain_Tabs_Tab1_lbTabObjectsHeader">
+                Projekte
+               </span>
+               <span class="margin-left5 tab-counter" id="cphContainer_cphMain_Tabs_Tab1_lbObjectsCounter">
+                3
+               </span>
+              </div>
+             </span>
+            </a>
+           </span>
+          </span>
+         </span>
+         <span class="ajax__tab" id="cphContainer_cphMain_Tabs_Tab5_tab">
+          <span class="ajax__tab_outer">
+           <span class="ajax__tab_inner">
+            <a class="ajax__tab_tab" href="#" id="__tab_cphContainer_cphMain_Tabs_Tab5">
+             <span>
+              <div class="ajax_tab_second">
+              </div>
+             </span>
+            </a>
+           </span>
+          </span>
+         </span>
+         <span class="ajax__tab" id="cphContainer_cphMain_Tabs_Tab6_tab">
+          <span class="ajax__tab_outer">
+           <span class="ajax__tab_inner">
+            <a class="ajax__tab_tab" href="#" id="__tab_cphContainer_cphMain_Tabs_Tab6">
+             <span>
+              <div class="ajax_tab_third">
+              </div>
+             </span>
+            </a>
+           </span>
+          </span>
+         </span>
+        </div>
+        <div class="ajax__tab_body" id="cphContainer_cphMain_Tabs_body" style="display:block;">
+         <div class="ajax__tab_panel" id="cphContainer_cphMain_Tabs_Tab1">
+          <section class="margin-top20 padding-left30 padding-right20">
+           <span class="copytext-silent" id="cphContainer_cphMain_Tabs_Tab1_cProjects_lblTabObjects">
+            An diesen Projekten war Architekten Göken + Henckel GbR beteiligt
+           </span>
+          </section>
+          <div class="loader-white padding-top20" id="cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects">
+           <hr class="solid-line"/>
+           <div class="grid-span8 margin-left0 padding-top20 padding-bottom20 obj-noimage">
+            <a class="list-view-item-noimage padding-left20" href="https://www.xpertio.net/forum-st-peter-neubau-eines-pfarrhauses-mit-verwaltungsgebaeude_oldenburg/0/609520">
+             <p class="lv-project-title copytext-bold">
+              "Forum St. Peter" - Neu...
+             </p>
+             <p class="lv-project-address copytext" style="margin-top:6px">
+              Peterstr./Georgstr.
+              <br/>
+              26121 Oldenburg
+             </p>
+             <div class="clear">
+             </div>
+            </a>
+           </div>
+           <div class="grid-span8 margin-left0 padding-top20 padding-bottom20 obj-noimage">
+            <a class="list-view-item-noimage padding-left20" href="https://www.xpertio.net/umbau-und-erweiterung-des-rathauses-ausbaugewerke_boesel/0/253354">
+             <p class="lv-project-title copytext-bold">
+              Umbau und Erweiterung d...
+             </p>
+             <p class="lv-project-address copytext" style="margin-top:6px">
+              Kirchplatz
+              <br/>
+              26219 Bösel
+             </p>
+             <div class="clear">
+             </div>
+            </a>
+           </div>
+           <div class="grid-span8 margin-left0 padding-top20 padding-bottom20 obj-noimage">
+            <a class="list-view-item-noimage padding-left20" href="https://www.xpertio.net/kirche-am-meer-neubau-einer-kirche_wangerland/0/87434">
+             <p class="lv-project-title copytext-bold">
+              "Kirche am Meer" - Neub...
+             </p>
+             <p class="lv-project-address copytext" style="margin-top:6px">
+              26434 Wangerland
+             </p>
+             <div class="clear">
+             </div>
+            </a>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="padding-top20 pager-container" id="cphContainer_cphMain_Tabs_Tab1_cProjects_cpgrObjectReferences_pnlPager" style="display:none;">
+            <span id="cphContainer_cphMain_Tabs_Tab1_cProjects_cpgrObjectReferences_pgrList">
+             <span class="page-nummeric-button page-button-active">
+              1
+             </span>
+             <a class="button-grey page-navigation-button" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$Tabs$Tab1$cProjects$cpgrObjectReferences$pgrList$ctl02$btnNext", "", true, "", "", false, true))' id="cphContainer_cphMain_Tabs_Tab1_cProjects_cpgrObjectReferences_pgrList_ctl02_btnNext">
+              Nächste Seite
+             </a>
+            </span>
+           </div>
+          </div>
+          <div class="clear">
+          </div>
+         </div>
+         <div class="ajax__tab_panel" disabled="disabled" id="cphContainer_cphMain_Tabs_Tab5" style="display:none;">
+         </div>
+         <div class="ajax__tab_panel" disabled="disabled" id="cphContainer_cphMain_Tabs_Tab6" style="display:none;">
+         </div>
+        </div>
+       </div>
+      </section>
+      <a href="#" id="hlAnchorContactForm">
+      </a>
+     </section>
+     <section class="grid-span8 margin-top20" id="sidebar" style="z-index: 5">
+      <input id="cphContainer_cphMain_hfLiftSidebar" name="ctl00$ctl00$cphContainer$cphMain$hfLiftSidebar" type="hidden" value="false"/>
+      <section class="sidebar-box">
+       <p class="h4 sidebar-title-open">
+        Branche
+       </p>
+       <section class="sidebar-content show-content">
+        <ul class="ticks">
+         <li>
+          <a href="https://www.xpertio.net/architekten_planer/architekt-und-bauplaner">
+           Architekt und Bauplaner
+          </a>
+         </li>
+         <li>
+          <a href="https://www.xpertio.net/architekten_planer/stadtplaner">
+           Stadtplaner
+          </a>
+         </li>
+        </ul>
+        <ul class="ticks ticks-more">
+        </ul>
+       </section>
+      </section>
+      <section class="sidebar-box margin-top40" id="cphContainer_cphMain_secRerportProfile">
+       <div class="sidebar-content show-content padding-left10">
+        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$crpReportProfile$btnShowReportDialog", "", true, "", "", false, true))' id="cphContainer_cphMain_crpReportProfile_btnShowReportDialog">
+         Profil oder Fehler melden
+        </a>
+        <span>
+         <div class="report-profile" id="cphContainer_cphMain_crpReportProfile_pnlReportProfile" style="display:none">
+          <div class="grid-span10 grid-first close-confirm-popup">
+           <div class="content-box">
+            <div class="toolbar width100">
+             <h3 class="padding-left20 padding-top20 display-inline-block">
+              Profil oder Fehler melden
+             </h3>
+             <div class="toolbar-close float-right margin-right60 dropdownlist-separator">
+              <a onclick="closeDialogReportProfile()">
+              </a>
+              <img alt="x" class="display-none" src="../../images/toolbar/close_hover.png"/>
+             </div>
+            </div>
+            <div id="cphContainer_cphMain_crpReportProfile_upReportProfile">
+             <div class="grid-span9 grid-first padding-horizontal20 padding-bottom20">
+              <div class="custom-message margin-top20 custom-message-error" id="cphContainer_cphMain_crpReportProfile_cmReportFormValidator_divCustomMessage">
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+              <div class="margin-top20">
+               <span>
+                Was ist Ihnen aufgefallen?
+               </span>
+               <textarea class="custom-textarea copytext" cols="20" id="cphContainer_cphMain_crpReportProfile_tbYourText" name="ctl00$ctl00$cphContainer$cphMain$crpReportProfile$tbYourText" onchange="countTextLen(this,1000)" onkeyup="countTextLen(this,1000)" rows="15" style="width:330px;">
+</textarea>
+              </div>
+              <div class="margin-top20">
+               <span>
+                Ihr Name
+               </span>
+               <input class="width100 custom-input custom-input-small" id="cphContainer_cphMain_crpReportProfile_tbYourName" maxlength="100" name="ctl00$ctl00$cphContainer$cphMain$crpReportProfile$tbYourName" type="text"/>
+              </div>
+              <div class="margin-top20">
+               <span>
+                Ihre E-Mail-Adresse
+               </span>
+               <input class="width100 custom-input custom-input-small" id="cphContainer_cphMain_crpReportProfile_tbYourEmail" maxlength="100" name="ctl00$ctl00$cphContainer$cphMain$crpReportProfile$tbYourEmail" type="text"/>
+              </div>
+              <div class="clear">
+              </div>
+              <div class="margin-top20 float-right">
+               <a class="button-sm button-grey margin-right10" onclick="closeDialogReportProfile()">
+                Abbrechen
+               </a>
+               <a class="button-sm button-blue" href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cphContainer$cphMain$crpReportProfile$btnSendReport", "", true, "ReportForm", "", false, true))' id="cphContainer_cphMain_crpReportProfile_btnSendReport" onclick="ScrollToValidationSummry();">
+                Nachricht an xpertio.net senden
+               </a>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+          </div>
+          <div class="clear">
+          </div>
+         </div>
+        </span>
+        <script type="text/javascript">
+         Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function (sender, args) {
+        var asyncTrg = sender._postBackSettings.asyncTarget;
+        if (asyncTrg != null) {
+            if (asyncTrg.indexOf("btnSendReport") > 0) {
+                showPopupLoader("cphContainer_cphMain_crpReportProfile_pnlReportProfile");
+            }
+        }
+        sender.add_endRequest(function (s, a) {
+            custReportProfile_endRequest(s, a, asyncTrg);
+        });
+    });
+
+    function custReportProfile_endRequest(sender, args, asyncTrg) {
+        sender.remove_endRequest(custReportProfile_endRequest.caller); // Unhook this handler from the PageRequestManager
+
+        if (asyncTrg != null) {
+            if (asyncTrg.indexOf("btnShowReportDialog") > 0) {
+                showLightBox($('.report-profile'), true);
+
+                removeZindexOnWrapper();
+            }
+            else if (asyncTrg.indexOf("btnSendReport") > 0) {
+                closeDialogReportProfile();
+                hidePopupLoader("cphContainer_cphMain_crpReportProfile_pnlReportProfile");
+            }
+        }
+    }
+
+    function closeDialogReportProfile() {
+        closeLightBoxAndPopup('report-profile');
+        addZindexOnWrapper();
+
+        // clear all fields
+        $(".custom-input").val("");
+        $(".custom-textarea").val("");
+
+        // hide all required and regex validation error messages
+        $(".error-text").hide();
+
+        // hide validation summary error messages
+        $(".custom-message-error div[id$=_vSummary]").hide();
+    }
+
+    // Scroll to validation summary after validation failure
+    function ScrollToValidationSummry() {
+        var validationSummary = $("#cphContainer_cphMain_crpReportProfile_cmReportFormValidator");
+
+        window.scrollTo = function () { };
+
+        validationSummary.onpropertychange = function () {
+            if (this.css('display') != 'none') {
+                validationSummary.scrollIntoView();
+            }
+        }
+    }
+
+    // these function are used because when the sidebar is moved to the right side on the BC then the report form is stay behind /lightbox background/
+    // remove a z-index css style on the wrapper element
+    function removeZindexOnWrapper() {
+        var wrapperWithZindex = "#sidebar";
+        if (wrapperWithZindex != "" && $(wrapperWithZindex).length > 0 && $(wrapperWithZindex).css("z-index") != "auto") {
+            // create a hidden field with value equal of the wrapper's z-index
+            $('<input>').attr({
+                type: 'hidden',
+                id: 'hfWrapperZindex',
+                name: 'hfWrapperZindex',
+                value: $(wrapperWithZindex).css("z-index")
+            }).appendTo('.report-profile');
+
+            // remove z-index
+            $(wrapperWithZindex).css("z-index", "");   
+        }
+    }
+
+    // add a z-index css style on the wrapper element
+    function addZindexOnWrapper() {
+        var wrapperWithZindex = "#sidebar";
+        if (wrapperWithZindex != "" && $(wrapperWithZindex).length > 0) {
+            if ($("#hfWrapperZindex").length > 0){
+                var zindexValue = $("#hfWrapperZindex").val();
+                $("#hfWrapperZindex").remove();
+                $(wrapperWithZindex).css("z-index", zindexValue > 0 ? zindexValue : "auto");
+            }
+        }
+    }
+        </script>
+       </div>
+      </section>
+     </section>
+     <div class="clear">
+     </div>
+     <script type="text/javascript">
+      function showMoreBranches() {
+            $(".lv-more-branches-link").toggle(
+                function () { $(this).prev(".lv-more-branches").show(); $(this).html('weniger...'); },
+                function () { $(this).prev(".lv-more-branches").hide(); $(this).html('mehr...'); }
+            );
+        }
+
+        $(document).ready(function () {
+            var newRequest = 'False' == 'False';
+            if (newRequest && typeof $.getUrlVar("tab") !== 'undefined' && $.getUrlVar("tab") == "3" && $('#cphContainer_cphMain_Tabs_Tab3_cRecommendations_cmRecommendSuccess_lb').is(':visible')) {
+                document.getElementById('hlAnchorTabTop').scrollIntoView();
+            }
+            else {
+                window.scrollTo(0, 0);
+            }
+
+            toggleSidebarSections();
+            toggleMoreLink("a.more-branches-link", ".ticks-more",
+                'mehr...', 
+                'weniger...');
+
+            if ($("#cphContainer_cphMain_hfLiftSidebar").val() == "true") {
+                var bcTop = $('.business-card').offset().top;
+                var sbTop = $('#sidebar').offset().top;
+                var sbStep = bcTop - sbTop;
+                $("#sidebar").css({
+                    "position": "relative",
+                    "top": sbStep + "px",
+                    "margin-bottom": sbStep + "px",
+                    "overflow": "visible"
+                });
+            }
+
+            if ('True' == 'True') {
+                $("#cphContainer_cphMain_Tabs_Tab3_upRecommendationsCounter").addClass("display-none");
+                inactiveTabHover('Tab2');
+                inactiveTabHover('Tab3');
+            }
+
+            showMoreBranches();
+            moreReferencesStyle();
+            
+            if (typeof $.getUrlVar("tab") != "undefined") {
+                openTab($.getUrlVar("tab"));
+            }
+        });
+        
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function (sender, args) {
+            var asyncTrg = sender._postBackSettings.asyncTarget;
+            if (asyncTrg != null) {
+                if (asyncTrg.indexOf("btnAddRemoveFavorite") == -1 || asyncTrg.indexOf("btnConfirmAddFavorite") == -1 || asyncTrg.indexOf("btnConfirmDeleteFavorite") == -1 ||
+                     asyncTrg.indexOf("btnPreviousFavorites") > -1 || asyncTrg.indexOf("btnNextFavorites") > -1) {
+                    // nothing
+                }
+                else {
+                    document.getElementById('hlAnchorTabTop').scrollIntoView();
+                }
+            }
+            sender.add_endRequest(function (s, a) {
+                architect_endRequest(s, a, asyncTrg);
+                showMoreBranches();
+            });
+        });
+
+        function architect_endRequest(sender, args, asyncTrg) {
+            sender.remove_endRequest(architect_endRequest.caller); // Unhook this handler from the PageRequestManager
+
+            if (asyncTrg != null) {
+                if (asyncTrg.indexOf("pgrList") > 0) {
+                    document.getElementById('hlAnchorTabTop').scrollIntoView();
+
+                    if (asyncTrg.indexOf("cpgrObjectReferences") > 0) {
+                        moreReferencesStyle();
+                    }
+                    else if (asyncTrg.indexOf("cpgrManufacturerReferences") > 0) {
+                        showMoreProducts();
+                    }
+                }
+            }
+        }
+
+        function moreReferencesStyle() {
+            moreReferencesStyleArchitect("cphContainer_cphMain_Tabs", "#cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects",
+                'Weitere Referenzen');
+        }
+
+        //Google Analytics tracking
+        gaqPushClick('Pages', 'PP_Architect_view');
+
+        gaqAttachOnClick("#cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects", ".lgv-item a", 'Search', 'PP_Account_click_item_references');
+        gaqAttachOnClick("#cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects", "a.list-view-item-noimage", 'Search', 'PP_Account_click_item_references');
+
+        gaqAttachOnClick("#cphContainer_cphMain_Tabs_Tab2_upPartnerMans", "a.list-view-item", 'Search', 'PP_Account_click_item_partners');
+        
+        gaqAttachOnClick("#cphContainer_cphMain_Tabs_Tab3_upTabRecommends", "a.list-view-item", 'Search', 'PP_Account_click_item_recommendations');
+
+        if(!true){
+            gaqPushDisplay('Error', 'PP_wrong_url_entered');
+        }
+
+        gaqAttachClick("#cphContainer_cphMain_hlEditAccount", 'EditAccount', 'account_public_click_edit_btn');
+     </script>
+     <script id="scrRecommend" type="text/javascript">
+      // Recommend button logic
+
+        function openTab(tabindex) {
+            $('#__tab_cphContainer_cphMain_Tabs_Tab' + tabindex).children('span').click();
+        }
+
+        var urlVarsCount = $.getUrlVars().length;
+        $('.ajax__tab_outer').click(function (e) {
+            if (!e.isTrigger) {
+                if ($(this).hasClass("empty_tab_hover")) {
+                    e.preventDefault();
+                    return false;
+                }
+                var activeTab = ($(this).parent().attr("ID").replace("cphContainer_cphMain_Tabs_Tab", "")).replace("_tab", "");
+                urlVarsCount = setTabIndex(activeTab, urlVarsCount);
+            }
+        });
+
+        inactiveTabHover(4);
+        inactiveTabHover(5);
+        inactiveTabHover(6);
+
+/*      //Return to selected tab
+        if (history.pushState && history.replaceState) {
+            window.onpopstate = function (e) {
+                if (typeof $.getUrlVar("tab") != "undefined") {
+                    openTab($.getUrlVar("tab"));
+                }
+            }
+        }*/
+     </script>
+    </section>
+    <div class="clear">
+    </div>
+    <div class="lightbox-loading" style="display:none">
+     <div>
+     </div>
+    </div>
+   </div>
+   <footer class="footer copytext-link margin-top40">
+    <div class="page padding-top30">
+     <div class="grid-span5 grid-first margin-bottom20">
+      <p class="h4 line-height24">
+       Unternehmen
+      </p>
+      <ul class="footer-links">
+       <li>
+        <a href="/xpertio" id="hlFooterAbout">
+         Über xpertio.net
+        </a>
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="grid-span4 margin-bottom20">
+      <p class="h4 line-height24">
+       Hilfe
+      </p>
+      <ul class="footer-links">
+       <li>
+        <a href="/kontakt" id="hlFooterContacts">
+         Kontakt
+        </a>
+       </li>
+       <li>
+        <a href="/hilfe" id="hlFooterFAQ">
+         FAQ
+        </a>
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="grid-span6 margin-bottom20">
+      <p class="h4 line-height24">
+       Produkte und Preise
+      </p>
+      <ul class="footer-links">
+       <li>
+        <a href="https://www.xpertio.net/cms/produkte/" id="hlWordpressProducts">
+         Übersicht
+        </a>
+       </li>
+       <li>
+        <a href="/produkte_fachunternehmen">
+         Fachunternehmen
+        </a>
+       </li>
+       <li>
+        <a href="/produkte_architekten">
+         Architekten und Planer
+        </a>
+       </li>
+       <li>
+        <a href="/produkte_hersteller_handel">
+         Hersteller und Handel
+        </a>
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="grid-span5 margin-left0 margin-bottom20">
+      <p class="h4 line-height24">
+       Rechtliches
+      </p>
+      <ul class="footer-links">
+       <li>
+        <a href="/agb_benutzer">
+         AGB Benutzer
+        </a>
+       </li>
+       <li>
+        <a href="/agb_unternehmen">
+         AGB Unternehmen
+        </a>
+       </li>
+       <li>
+        <a href="/datenschutz">
+         Datenschutz
+        </a>
+       </li>
+       <li>
+        <a href="/impressum">
+         Impressum
+        </a>
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="grid-span4 margin-left0 margin-bottom20">
+      <p class="h4 line-height24">
+       xpertio.net ist ein Service von
+      </p>
+      <a class="float-left" href="http://ibau.de/" target="_blank">
+       <img alt="ibau" class="margin-top15 display-block" src="/images/ibau-logo-32x32.png"/>
+      </a>
+      <div class="clear">
+      </div>
+     </div>
+     <div class="grid-span24 grid-first margin-top20 margin-bottom40">
+      <p>
+       © 2021 ibau GmbH - Alle Rechte vorbehalten
+      </p>
+     </div>
+     <div class="clear">
+     </div>
+    </div>
+   </footer>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Extended.UI.Localization.SetLocale("de");Sys.Extended.UI.Localization.SetLocale("de");Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"headerTab":$get("__tab_cphContainer_cphMain_Tabs_Tab1"),"ownerID":"cphContainer_cphMain_Tabs","wasLoadedOnce":false}, null, {"owner":"cphContainer_cphMain_Tabs"}, $get("cphContainer_cphMain_Tabs_Tab1"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"enabled":false,"headerTab":$get("__tab_cphContainer_cphMain_Tabs_Tab5"),"ownerID":"cphContainer_cphMain_Tabs","wasLoadedOnce":false}, null, {"owner":"cphContainer_cphMain_Tabs"}, $get("cphContainer_cphMain_Tabs_Tab5"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabPanel, {"enabled":false,"headerTab":$get("__tab_cphContainer_cphMain_Tabs_Tab6"),"ownerID":"cphContainer_cphMain_Tabs","wasLoadedOnce":false}, null, {"owner":"cphContainer_cphMain_Tabs"}, $get("cphContainer_cphMain_Tabs_Tab6"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TabContainer, {"activeTabIndex":0,"clientStateField":$get("cphContainer_cphMain_Tabs_ClientState"),"onDemand":false,"tabStripPlacement":0,"useVerticalStripPlacement":false}, {"activeTabChanged":Tabs_ClientActiveTabChanged}, null, $get("cphContainer_cphMain_Tabs"));
+});
+//]]>
+   </script>
+  </form>
+  <script type="text/javascript">
+   $(window).load(function () {
+            orderPersonDetailsBlocks("pnlPersonProfileData", false);
+        });
+
+        function orderPersonDetailsBlocks(panelID, waitLoad) {
+            var items = $('#' + panelID + ' .data-item');
+            if (items.length > 0) {
+                if (waitLoad) {
+                    if ($('#' + panelID).find('img').length) {
+                        $('#' + panelID).find('img').last().load(function () {
+                            orderUsingMasonry(panelID, 'data-item', true);
+                        });
+                    }
+                    else {
+                        orderUsingMasonry(panelID, 'data-item', true);
+                    }
+                }
+                else {
+                    orderUsingMasonry(panelID, 'data-item', true);
+                }
+            }
+        }
+
+        $(document).on("click", ".search-persons-link, .search-projects-in-germany-link", function () {
+            var cookieSettings = {
+                domain: 'www.xpertio.net',
+                expires: 1,
+                path: '/'
+            }
+            $.cookie("LogoCityName", "", cookieSettings);
+            $.cookie("QueryData", "", cookieSettings);
+        });
+
+        $(document).on("click", ".search-companies-link, .search-projects-link", function () {
+            var cookieSettings = {
+                domain: 'www.xpertio.net',
+                expires: 1,
+                path: '/'
+            }
+
+            $.cookie("QueryData", "", cookieSettings);
+        });
+
+        //gaqAttachOnClick(document, ".link-person-timeline", "PersonProfile", "view_timeline");
+        gaqAttachOnClick(document, ".link-person-profile-edit", "PersonProfile", "view_profile");
+        gaqAttachOnClick(document, ".link-person-favorites", "PersonProfile", "view_watchlist");
+        gaqAttachOnClick(document, ".link-person-contacts", "PersonProfile", "view_contacts");
+        gaqAttachOnClick(document, ".link-add-account", "PersonProfile", "create_company_profile");
+
+        gaqAttachOnClick("#upHeaderActions", "#hlHeaderSearchCompanies", "Pages", "Navigation_click_companies");
+        gaqAttachOnClick("#upHeaderActions", "#hlHeaderSearchProjects", "Pages", "Navigation_click_projects");
+        gaqAttachOnClick("#upHeaderActions", "#hlHeaderSearchPersons", "Pages", "Navigation_click_users");
+        gaqAttachOnClick("#upHeaderActions", "#hlHeaderBlog", "Pages", "Navigation_click_blog");
+        gaqAttachOnClick("#upHeaderActions", "#hlLogin", "Pages", "Navigation_click_login_btn");
+        gaqAttachOnClick("#upHeaderActions", "#hlRegister", "Pages", "Navigation_click_register_btn");
+  </script>
+  <!-- Google Code für ein Remarketing-Tag -->
+  <!-- Remarketing-Tags dürfen nicht mit personenbezogenen Daten verknüpft oder auf Seiten platziert werden, die sensiblen Kategorien angehören. Weitere Informationen und Anleitungen zur Einrichtung des Tags erhalten Sie unter: http://google.com/ads/remarketingsetup -->
+  <script type="text/javascript">
+   /* <![CDATA[ */
+    var google_conversion_id = 982828115;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+ </body>
+</html>
