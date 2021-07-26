@@ -12,10 +12,10 @@ def make_xlsx(array, file_name):
     df1.to_excel(f"~/Desktop/{file_name}.xlsx")  
     
 if __name__ == '__main__':
-    db_name = 'scrp_listen'
-    col_name = 'bgv_bayern_gaertner'
+    db_name = 'GoogleApi'
+    col_name = 'google_Konferenzraumtechnik_Konferenzraumtechnik'
     # search_for_plz = {'PLZ': {'$regex': r'^97'}}
-    query = {
+    query = {'ZFID': {'$exists': True}
         # '$or': [
         #    {'PLZ': {'$regex': '^20'}}, 
         #    {'PLZ': {'$regex': '^29'}}, 
@@ -50,5 +50,5 @@ if __name__ == '__main__':
     }
 
     zfid_array = search_for_zfids_for_export(db_name, col_name, query)
-    file_name = 'gaertnereien_bayern'
+    file_name = 'google_Konferenzraumtechnik_Konferenzraumtechnik'
     make_xlsx(zfid_array, file_name)

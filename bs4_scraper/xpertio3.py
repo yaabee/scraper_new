@@ -1,4 +1,5 @@
 
+from re import X
 from pymongo import MongoClient, errors
 from bs4 import BeautifulSoup
 import requests
@@ -15,15 +16,14 @@ def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
 
 # num = 129430
 
+
 def get_xpertio(kategorie, num, till):
 
     # num = 0
     counter = 0
     # kategorie = 10
     #1000000
-    while num < till:
         try:
-            url = f'https://www.xpertio.net/atelier-reissbrett_bruchhausen-vilsen/{kategorie}/{num}'
             page = requests.get(url)
             if page.ok:
                 counter += 1
@@ -147,17 +147,17 @@ if __name__ == '__main__':
     haendler / 
     cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects
     '''
-    # get_xpertio(10, 500)
-    t1 = threading.Thread(target=get_xpertio, args=(11, 300000, 400000),)
-    t2 = threading.Thread(target=get_xpertio, args=(11, 400000, 500000),)
-    t3 = threading.Thread(target=get_xpertio, args=(11, 500000, 600000),)
-    t4 = threading.Thread(target=get_xpertio, args=(11, 600000, 700000),)
-    t5 = threading.Thread(target=get_xpertio, args=(11, 700000, 800000),)
-    t6 = threading.Thread(target=get_xpertio, args=(11, 800000, 900000),)
+    get_xpertio(10, 500, 10)
+    # t1 = threading.Thread(target=get_xpertio, args=(11, 300000, 400000),)
+    # t2 = threading.Thread(target=get_xpertio, args=(11, 400000, 500000),)
+    # t3 = threading.Thread(target=get_xpertio, args=(11, 500000, 600000),)
+    # t4 = threading.Thread(target=get_xpertio, args=(11, 600000, 700000),)
+    # t5 = threading.Thread(target=get_xpertio, args=(11, 700000, 800000),)
+    # t6 = threading.Thread(target=get_xpertio, args=(11, 800000, 900000),)
 
-    t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
-    t5.start()
-    t6.start()
+    # t1.start()
+    # t2.start()
+    # t3.start()
+    # t4.start()
+    # t5.start()
+    # t6.start()

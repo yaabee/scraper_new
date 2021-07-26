@@ -99,5 +99,5 @@ def zfid_einspielen(db_name, col_name):
 if __name__ == '__main__':
   #google_google_gebäudetechnik_marburg_xlsx
   db_name = 'GoogleApi'
-  col_name = 'google_Stadtplaner_Stadtplaner'
+  col_name = 'google_Konferenzraumtechnik_Konferenzraumtechnik'
   zfid_einspielen(db_name, col_name)

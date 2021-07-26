@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 import ssl
-import re
 
 client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
@@ -86,12 +85,32 @@ energieberater = dict(
 
 zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 col = client_5['GoogleApi']['google_Stadtplaner_Stadtplaner']
-cursor = col.find({}, {'ZFID': 1})
+cursor = zf.find({'Meta.BranchenDetails.Extern': {'$elemMatch': {'Name':'energieberater'}}}, {'ZFID': 1, 'Meta.BranchenDetails.Extern': 1})
 
 for i in cursor:
   print(i['ZFID'])
-
   ds = zf.find_one({'ZFID': i['ZFID']})
+
+  for k in i['Meta']['BranchenDetails']['Extern']:
+    if k['Name'] == 'energieberater':
+      print('found')
+      clean_obj = {
+        'Herkunft': '1',
+        'Name': 'energieberater',
+        'WZCode': k['WZCode']
+      }
+      zf.update_one(
+        {'ZFID': i['ZFID']},
+        {'$addToSet': {'Meta.BranchenDetails.Extern': clean_obj}}
+      )
+      zf.update_one(
+        {'ZFID': i['ZFID']},
+        {'$pull': {'Meta.BranchenDetails.Extern': k}}
+      )
+      
+
+
+
 
 
   # zf.update_one(
@@ -99,11 +118,10 @@ for i in cursor:
   #   {'$addToSet': {'Meta.BranchenDetails.Extern': energieberater}}
   # )
 
-
-  zf.update_one(
-    {'ZFID': i['ZFID']},
-    {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
-  )
+  # zf.update_one(
+  #   {'ZFID': i['ZFID']},
+  #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
+  # )
 
   # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
 

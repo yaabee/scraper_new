@@ -14,6 +14,14 @@ def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
 
 
 # num = 129430
+client = MongoClient('192.168.100.5:27017')
+
+xpertio = client['scrp_listen']['xpertio']
+
+projekte_x = xpertio.distinct('Projekte')
+referenz = xpertio.distinct('Referenzen')
+combi = referenz + projekte_x
+print(len(combi))
 
 def get_xpertio(kategorie, num, till):
 
@@ -21,9 +29,9 @@ def get_xpertio(kategorie, num, till):
     counter = 0
     # kategorie = 10
     #1000000
-    while num < till:
+    for url in combi:
         try:
-            url = f'https://www.xpertio.net/atelier-reissbrett_bruchhausen-vilsen/{kategorie}/{num}'
+            # url = f'https://www.xpertio.net/atelier-reissbrett_bruchhausen-vilsen/{kategorie}/{num}'
             # url = 'https://www.xpertio.net/veitshoechheim-mainfrankensaele-vorzeigeprojekt-in-sachen-energieeffizienz_veitshoechheim/0/692819'
             # url = 'https://www.xpertio.net/neubau-eines-einfamilienhauses_ingoldingen/0/687348'
             page = requests.get(url)
@@ -160,22 +168,22 @@ if __name__ == '__main__':
     haendler / 
     cphContainer_cphMain_Tabs_Tab1_cProjects_upTabObjects
     '''
-    # get_xpertio(0, 1, 2)
-    t7 = threading.Thread(target=get_xpertio, args=(0, 100000, 200000),)
-    t8 = threading.Thread(target=get_xpertio, args=(0, 200000, 300000),)
-    t1 = threading.Thread(target=get_xpertio, args=(0, 300000, 400000),)
-    t2 = threading.Thread(target=get_xpertio, args=(0, 400000, 500000),)
-    t3 = threading.Thread(target=get_xpertio, args=(0, 500000, 600000),)
-    t4 = threading.Thread(target=get_xpertio, args=(0, 600000, 700000),)
-    t5 = threading.Thread(target=get_xpertio, args=(0, 700000, 800000),)
-    t6 = threading.Thread(target=get_xpertio, args=(0, 800000, 900000),)
-    t9 = threading.Thread(target=get_xpertio, args=(0, 900000, 1000000),)
+    get_xpertio(0, 1, 2)
+    # t7 = threading.Thread(target=get_xpertio, args=(0, 100000, 200000),)
+    # t8 = threading.Thread(target=get_xpertio, args=(0, 200000, 300000),)
+    # t1 = threading.Thread(target=get_xpertio, args=(0, 300000, 400000),)
+    # t2 = threading.Thread(target=get_xpertio, args=(0, 400000, 500000),)
+    # t3 = threading.Thread(target=get_xpertio, args=(0, 500000, 600000),)
+    # t4 = threading.Thread(target=get_xpertio, args=(0, 600000, 700000),)
+    # t5 = threading.Thread(target=get_xpertio, args=(0, 700000, 800000),)
+    # t6 = threading.Thread(target=get_xpertio, args=(0, 800000, 900000),)
+    # t9 = threading.Thread(target=get_xpertio, args=(0, 900000, 1000000),)
 
-    t1.start()
-    t2.start()
-    t3.start()
-    t4.start()
-    t5.start()
-    t6.start()
-    t7.start()
-    t8.start()
+    # t1.start()
+    # t2.start()
+    # t3.start()
+    # t4.start()
+    # t5.start()
+    # t6.start()
+    # t7.start()
+    # t8.start()
