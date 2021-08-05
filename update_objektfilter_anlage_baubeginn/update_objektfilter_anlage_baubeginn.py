@@ -23,6 +23,7 @@ def main():
         dateSixMonthFut = date + relativedelta(months=i["AnzahlMonate"])
         dateSixMonthAgo = dateSixMonthAgo.isoformat()
         dateSixMonthFut = dateSixMonthFut.isoformat()
+        dateSixMonthFut = dateSixMonthFut[:8] + '01' + 'T00:00:00.000+00:00'
         if i["Baubeginn"]["Von"] and not i["Baubeginn"]["Bis"]:
             cronjobs.update_one(
                 {"schnellfilter_name": i["schnellfilter_name"]},
