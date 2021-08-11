@@ -3,133 +3,129 @@ import ssl
 
 client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
-                     username='mongoroot',
-                     password='9gCaPFhotG2CNEoBRdgA',
-                     authSource='admin',
-                     authMechanism='SCRAM-SHA-256',
-                     ssl=True,
-                     ssl_cert_reqs=ssl.CERT_NONE)
+                         username='mongoroot',
+                         password='9gCaPFhotG2CNEoBRdgA',
+                         authSource='admin',
+                         authMechanism='SCRAM-SHA-256',
+                         ssl=True,
+                         ssl_cert_reqs=ssl.CERT_NONE)
 
 planerhkls = dict(
-  Herkunft='Google',
-  Name='planer_hkls',
-  WZCode=227132102
+    Herkunft='Google',
+    Name='planer_hkls',
+    WZCode=227132102
 )
 planerhochbau = dict(
-  Herkunft='Google',
-  Name='planer_hochbau',
-  WZCode=227111200
+    Herkunft='Google',
+    Name='planer_hochbau',
+    WZCode=227111200
 )
 ausf_hkls = dict(
-  Herkunft='Google',
-  Name='ausf_hkls',
-  WZCode=154322100
+    Herkunft='Google',
+    Name='ausf_hkls',
+    WZCode=154322100
 )
 solaranlagen_anbieter = dict(
-  Herkunft='Google',
-  Name='solaranlagenanbieter',
-  WZCode=14
+    Herkunft='Google',
+    Name='solaranlagenanbieter',
+    WZCode=14
 )
 solaranlagen_installateur = dict(
-  Herkunft='Google',
-  Name='solaranlageninstallationsservice',
-  WZCode=13
+    Herkunft='Google',
+    Name='solaranlageninstallationsservice',
+    WZCode=13
 )
 fachplaner_elektro = dict(
-  Herkunft='Google',
-  Name='fachplaner_elektro',
-  WZCode=227132103
+    Herkunft='Google',
+    Name='fachplaner_elektro',
+    WZCode=227132103
 )
 ausf_gala = dict(
-  Herkunft='Google',
-  Name='ausf_gala',
-  WZCode=154411100
+    Herkunft='Google',
+    Name='ausf_gala',
+    WZCode=154411100
 )
 ingenieur = dict(
-  Herkunft='Google',
-  Name='ingenieur',
-  WZCode=2
+    Herkunft='Google',
+    Name='ingenieur',
+    WZCode=2
 )
 ausf_tiefbau = dict(
-  Herkunft='Google',
-  Name='ausf_tiefbau',
-  WZCode=154200000
+    Herkunft='Google',
+    Name='ausf_tiefbau',
+    WZCode=154200000
 )
 misch_bautraeger = dict(
-  Herkunft='Google',
-  Name='misch_bautraeger',
-  WZCode=154110000,
+    Herkunft='Google',
+    Name='misch_bautraeger',
+    WZCode=154110000,
 )
 generalübernehmer = dict(
-  Herkunft='Google',
-  Name='misch_gu/gue',
-  WZCode=216841500,
+    Herkunft='Google',
+    Name='misch_gu/gue',
+    WZCode=216841500,
 )
 seb = dict(
-  Herkunft='Google',
-  Name='seb',
-  WZCode=88,
+    Herkunft='Google',
+    Name='seb',
+    WZCode=88,
 )
 fensterbauer = dict(
-  Herkunft='Google',
-  Name='fensterbauer',
-  WZCode=1988,
+    Herkunft='Google',
+    Name='fensterbauer',
+    WZCode=1988,
 )
 
 energieberater = dict(
-  Herkunft='Google',
-  Name='energieberater/1',
-  WZCode=227491104,
+    Herkunft='Google',
+    Name='energieberater/1',
+    WZCode=227491104,
 
 )
 
 zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 col = client_5['GoogleApi']['google_Stadtplaner_Stadtplaner']
-cursor = zf.find({'Meta.BranchenDetails.Extern': {'$elemMatch': {'Name':'energieberater'}}}, {'ZFID': 1, 'Meta.BranchenDetails.Extern': 1})
+cursor = zf.find({'Meta.BranchenDetails.Extern': {'$elemMatch': {
+                 'Name': 'energieberater'}}}, {'ZFID': 1, 'Meta.BranchenDetails.Extern': 1})
 
 for i in cursor:
-  print(i['ZFID'])
-  ds = zf.find_one({'ZFID': i['ZFID']})
+    print(i['ZFID'])
+    ds = zf.find_one({'ZFID': i['ZFID']})
 
-  for k in i['Meta']['BranchenDetails']['Extern']:
-    if k['Name'] == 'energieberater':
-      print('found')
-      clean_obj = {
-        'Herkunft': '1',
-        'Name': 'energieberater',
-        'WZCode': k['WZCode']
-      }
-      zf.update_one(
-        {'ZFID': i['ZFID']},
-        {'$addToSet': {'Meta.BranchenDetails.Extern': clean_obj}}
-      )
-      zf.update_one(
-        {'ZFID': i['ZFID']},
-        {'$pull': {'Meta.BranchenDetails.Extern': k}}
-      )
-      
+    for k in i['Meta']['BranchenDetails']['Extern']:
+        if k['Name'] == 'energieberater':
+            print('found')
+            clean_obj = {
+                'Herkunft': '1',
+                'Name': 'energieberater',
+                'WZCode': k['WZCode']
+            }
+            zf.update_one(
+                {'ZFID': i['ZFID']},
+                {'$addToSet': {'Meta.BranchenDetails.Extern': clean_obj}}
+            )
+            zf.update_one(
+                {'ZFID': i['ZFID']},
+                {'$pull': {'Meta.BranchenDetails.Extern': k}}
+            )
 
+    # zf.update_one(
+    #   {'ZFID': i['ZFID']},
+    #   {'$addToSet': {'Meta.BranchenDetails.Extern': energieberater}}
+    # )
 
+    # zf.update_one(
+    #   {'ZFID': i['ZFID']},
+    #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
+    # )
 
+    # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
 
+    # delete field
+    # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
 
-  # zf.update_one(
-  #   {'ZFID': i['ZFID']},
-  #   {'$addToSet': {'Meta.BranchenDetails.Extern': energieberater}}
-  # )
-
-  # zf.update_one(
-  #   {'ZFID': i['ZFID']},
-  #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
-  # )
-
-  # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
-
-  # delete field
-  # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
-
-  # remove from array
-  # zf.update_one(
-  #   {'ZFID': i['ZFID']},
-  #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
-  # )
+    # remove from array
+    # zf.update_one(
+    #   {'ZFID': i['ZFID']},
+    #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
+    # )

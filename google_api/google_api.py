@@ -5,6 +5,8 @@ import ssl
 from pymongo import MongoClient
 from functools import lru_cache
 
+# 57b083732db2cb4c1200002b
+
 client = MongoClient(
     "192.168.100.239:27017",
     username="mongoroot",
@@ -17,8 +19,9 @@ client = MongoClient(
 
 db = client["ZentralerFirmenstamm"]
 firmenadresse = db["ZentralerFirmenstamm"]
-
 client_5 = MongoClient("192.168.100.5:27017")
+# hallenbau_cache = client_5['GoogleApi']['google_Hallenbau_Hallenbau']
+google_api = client_5['GoogleApi']
 
 
 def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
@@ -28,19 +31,18 @@ def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
     collection.insert_one(datensatz)
 
 
-def api_call(plz_or_city, suchbegriff, key, col_name=""):
+def api_call(plz_or_city, suchbegriff, key, col_name="", place_id=[]):
     query = f"query={suchbegriff}+{plz_or_city}"
     count = 0
+    already_in_db = 0
     cache = {}
     while True:
         url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?{query}&key={key}"
         req = requests.get(url)
         req_json = json.loads(req.text)
-        print("req_json", req_json)
-        # count api calls
         count += 1
         for i in req_json["results"]:
-            if i["place_id"] not in cache:
+            if i["place_id"] not in cache and i['place_id'] not in place_id:
                 # append to result
                 cache[i["place_id"]] = i["place_id"]
                 details = get_places_details(i["place_id"], key)
@@ -79,15 +81,18 @@ def api_call(plz_or_city, suchbegriff, key, col_name=""):
                     collection=f"google_{suchbegriff}_{col_name}",
                     datensatz=i,
                 )
-            else:
-                print("found in list")
+            if i['place_id'] in place_id:
+                already_in_db += 1
 
         # next page & break con
-        if "next_page_token" in req_json:
+        new_token = 0
+        if "next_page_token" in req_json and new_token < 2:
+            new_token += 1
             time.sleep(4)
             next_page = req_json["next_page_token"]
             query = f"pagetoken={next_page}"
         else:
+            print('already_in_db', already_in_db)
             return count
 
 
@@ -205,7 +210,7 @@ big_citys = [
 # PLZ = ['80', '81', '82','83','84','85','86','87',
 #       '90','91','92','93','94','95','96','97']
 
-cursor = list(firmenadresse.find({"PLZ": {"$regex": "^8"}}))
+cursor = list(firmenadresse.find({"PLZ": {"$regex": "^9"}}))
 cache_plz = {}
 plzs = [x["PLZ"] for x in cursor]
 for a in plzs:
@@ -219,18 +224,27 @@ for a in plzs:
         cache_plz[a] = a
 first = list(cache_plz.values())
 plz = first[::3]
-print(len(plz))
 
 if __name__ == "__main__":
     # key = 'AIzaSyD_PdV1xDgjKOAurk3SWWsoOb4Lj3Jz8BU'  # franz key
     key = "AIzaSyDRGsKy8xvOixFivn2bCaaWpgO-SKhyNOo"  # nue key
+
+    db = client_5['GoogleApi']
+    cache = []
+    for col in db.list_collection_names():
+        cursor = db[col].distinct('place_id')
+        cache += list(set(cursor))
+    print(len(cache))
     count_apicalls = 0
-    suchbegriff = "Klempner"
+    suchbegriff = "tga"
     plz_or_city = plz
     for i in plz_or_city:
-        count_apicalls += api_call(i, suchbegriff, key, col_name=suchbegriff)
+        count_apicalls += api_call(
+            i, suchbegriff,
+            key, col_name=suchbegriff,
+            place_id=cache
+        )
         final_result = dict(anzahl_api_calls=count_apicalls)
-        print(i)
         print(final_result)
         print(get_places_details.cache_info())
         print("====================================")
