@@ -103,3 +103,7 @@ if __name__ == "__main__":
         print('ooooooooooooooooooooooff', offset)
         main(url)
         offset += 10
+
+# https://www.data2type.de/xml-xslt-xslfo/xpath/referenz/achsen/self
+# https://towardsdatascience.com/xpath-for-python-89f4423415e0
+# https://developer.mozilla.org/en-US/docs/Web/XPath/Functions/contains
