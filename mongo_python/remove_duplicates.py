@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 
+
 def remove_duplicates(db_name, col_name, cache_key_name):
     '''
     parameter:
@@ -33,6 +34,6 @@ def remove_duplicates(db_name, col_name, cache_key_name):
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'energie_effizienz_full'
+    col_name = 'hwk_neu'
     use_as_cache_key = 'ZFID'
     remove_duplicates(db_name, col_name, use_as_cache_key)

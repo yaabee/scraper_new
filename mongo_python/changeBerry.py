@@ -80,39 +80,54 @@ energieberater = dict(
     Herkunft='Google',
     Name='energieberater/1',
     WZCode=227491104,
+)
 
+technischer_berater = dict(
+    Herkunft='Google',
+    Name='technischer_berater',
+    WZCode='',
+)
+
+hallenbauer_hwk = dict(
+    Herkunft='hwk',
+    Name='hallen_bauer',
+    WZCode='',
+)
+hallenbauer_ta = dict(
+    Herkunft='ta',
+    Name='hallen_bauer',
+    WZCode='',
+)
+
+hallen_bauer = dict(
+    Herkunft='Google',
+    Name='hallen_bauer',
+    WZCode='',
+)
+
+# gebaeudetechnik
+hkls = dict(
+    Herkunft='Google',
+    Name='hkls',
+    WZCode='1',
 )
 
 zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['GoogleApi']['google_Stadtplaner_Stadtplaner']
-cursor = zf.find({'Meta.BranchenDetails.Extern': {'$elemMatch': {
-                 'Name': 'energieberater'}}}, {'ZFID': 1, 'Meta.BranchenDetails.Extern': 1})
+col = client_5['scrp_listen']['hwk_neu']
+cursor = col.find({'ZFID': {'$exists': True}})
 
 for i in cursor:
     print(i['ZFID'])
     ds = zf.find_one({'ZFID': i['ZFID']})
-
-    for k in i['Meta']['BranchenDetails']['Extern']:
-        if k['Name'] == 'energieberater':
-            print('found')
-            clean_obj = {
-                'Herkunft': '1',
-                'Name': 'energieberater',
-                'WZCode': k['WZCode']
-            }
-            zf.update_one(
-                {'ZFID': i['ZFID']},
-                {'$addToSet': {'Meta.BranchenDetails.Extern': clean_obj}}
-            )
-            zf.update_one(
-                {'ZFID': i['ZFID']},
-                {'$pull': {'Meta.BranchenDetails.Extern': k}}
-            )
-
     # zf.update_one(
     #   {'ZFID': i['ZFID']},
-    #   {'$addToSet': {'Meta.BranchenDetails.Extern': energieberater}}
+    #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
     # )
+
+    zf.update_one(
+        {'ZFID': i['ZFID']},
+        {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
+    )
 
     # zf.update_one(
     #   {'ZFID': i['ZFID']},
@@ -126,6 +141,6 @@ for i in cursor:
 
     # remove from array
     # zf.update_one(
-    #   {'ZFID': i['ZFID']},
-    #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
+    #     {'ZFID': i['ZFID']},
+    #     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
     # )

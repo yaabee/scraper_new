@@ -101,5 +101,5 @@ def zfid_einspielen(db_name, col_name):
 
 if __name__ == '__main__':
     db_name = 'GoogleApi'
-    col_name = 'google_Klempner_Klempner'
+    col_name = 'ingenieur'
     zfid_einspielen(db_name, col_name)

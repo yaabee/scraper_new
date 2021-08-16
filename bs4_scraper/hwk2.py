@@ -22,7 +22,6 @@ def main(url):
         links = soup.find_all("a", href=True)
         links = [l["href"] for l in links if "/betriebe/" in l["href"]
                  and not '/betriebe/suche' in l['href']]
-        pprint.pprint(links, indent=2)
         for link in links:
             data = {
                 "Firma": "",
@@ -33,7 +32,8 @@ def main(url):
                 "Fax": "",
                 "Internet": "",
                 "Email": "",
-                "Handy": ''
+                "Handy": '',
+                "Branche": ''
             }
             options = Options()
             options.add_argument('--headless')
@@ -44,7 +44,7 @@ def main(url):
                 betrieb_ele = browser.find_element_by_xpath(
                     '//*[@id="content"]/div/div[2]/div[1]/p')
                 betrieb_ele = betrieb_ele.text.split('\n')
-                print(betrieb_ele)
+                # print(betrieb_ele)
                 data['Firma'] = betrieb_ele[0].strip()
                 data['StrasseUndNr'] = betrieb_ele[1].strip()
                 data['PLZ'] = betrieb_ele[2].split(
@@ -58,7 +58,7 @@ def main(url):
                 ansprechpartner = browser.find_element_by_xpath(
                     '//*[@id="content"]/div/div[2]/div[2]/p')
                 adresse = ansprechpartner.text.split('\n')
-                print(adresse)
+                # print(adresse)
                 for i in adresse:
                     if 'Telefon' in i:
                         data['Telefon'] = i.replace("Telefon", '').strip()
@@ -74,12 +74,21 @@ def main(url):
             except:
                 print('ansprechpartner nciht gefunden')
                 pass
+            try:
+                eingetragene_berufe = browser.find_element_by_xpath(
+                    "//h5[.='Eingetragene Berufe']/following-sibling::p")
+                # print(eingetragene_berufe.text)
+                berufe = eingetragene_berufe.text.split('\n')
+                data['Branche'] = berufe
+            except Exception as e:
+                print(e.args)
+                pass
             print("------------------------------------------------------")
             pprint.pprint(data, indent=2)
             try:
                 insert_new_dataset_into_mdb(mdb_uri="192.168.100.5",
                                             datenbank='scrp_listen',
-                                            collection='hwk_neu',
+                                            collection='hwk_neu_neu',
                                             datensatz=data)
             except errors.DuplicateKeyError:
                 print('had duplicatekey error!!!!!!!!!!!!!!!!!!!!')
@@ -87,7 +96,8 @@ def main(url):
 
 
 if __name__ == "__main__":
-    offset = 7400
+    # offset = 7400
+    offset = 0
     while 1:
         url = f"https://www.hwk-ufr.de/betriebe/suche-78,0,bdbsearch.html?limit=10&search-searchterm=&search-local=&search-job=&search-filter-training=&search-filter-zipcode=(&search-filter-radius=20&search-filter-jobnr=&search-filter-experience=&offset={offset}"
         print('ooooooooooooooooooooooff', offset)

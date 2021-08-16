@@ -21,8 +21,8 @@ def main(plz, db_name, col_name, name_contains):
 
 if __name__ == '__main__':
     db_name = 'GoogleApi'
-    col_name = 'google_Klempner_Klempner'
-    name_contains = 'Spengler'
+    col_name = "google_Technischer Berater_Technischer Berater"
+    name_contains = 'Techni'
 
     # col_name = 'google_Ingenieur_Ingenieur'
     # name_contains = 'Ing.'

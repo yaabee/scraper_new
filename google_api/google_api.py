@@ -223,7 +223,8 @@ for a in plzs:
     ):
         cache_plz[a] = a
 first = list(cache_plz.values())
-plz = first[::3]
+# plz = first[::3]
+plz = first
 
 if __name__ == "__main__":
     # key = 'AIzaSyD_PdV1xDgjKOAurk3SWWsoOb4Lj3Jz8BU'  # franz key
@@ -236,7 +237,7 @@ if __name__ == "__main__":
         cache += list(set(cursor))
     print(len(cache))
     count_apicalls = 0
-    suchbegriff = "tga"
+    suchbegriff = "gebäude technik"
     plz_or_city = plz
     for i in plz_or_city:
         count_apicalls += api_call(
