@@ -49,7 +49,8 @@ def main(url):
                 data['StrasseUndNr'] = betrieb_ele[1].strip()
                 data['PLZ'] = betrieb_ele[2].split(
                     ' ')[0].replace('D-', '').strip()
-                data['Ort'] = ' '.join(betrieb_ele[2].split(' ')[1:]).strip()
+                data['Ort'] = ' '.join(
+                    betrieb_ele[2].split(' ')[1:]).strip()
             except Exception as e:
                 print(e.args)
                 print('betrieb_ele nciht gefunden')
@@ -93,11 +94,12 @@ def main(url):
             except errors.DuplicateKeyError:
                 print('had duplicatekey error!!!!!!!!!!!!!!!!!!!!')
                 pass
+            browser.close()
 
 
 if __name__ == "__main__":
     # offset = 7400
-    offset = 0
+    offset = 6910
     while 1:
         url = f"https://www.hwk-ufr.de/betriebe/suche-78,0,bdbsearch.html?limit=10&search-searchterm=&search-local=&search-job=&search-filter-training=&search-filter-zipcode=(&search-filter-radius=20&search-filter-jobnr=&search-filter-experience=&offset={offset}"
         print('ooooooooooooooooooooooff', offset)
