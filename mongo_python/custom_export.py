@@ -4,7 +4,8 @@ import pandas as pd
 
 def make_xlsx(array, file_name):
     df1 = pd.DataFrame(array)
-    df1.to_excel(header=False, index=False, excel_writer=f"~/Desktop/{file_name}.xlsx")
+    df1.to_excel(header=False, index=False,
+                 excel_writer=f"~/Desktop/{file_name}.xlsx")
 
 
 def custom_export(db_name, col_name, file_name, keys, query, header):
@@ -30,37 +31,65 @@ def custom_export(db_name, col_name, file_name, keys, query, header):
 if __name__ == "__main__":
     query = {}
     db_name = "scrp_listen"
-    col_name = "xpertio"
-    file_name = "xpertio"
+    col_name = "hwk_neu"
+    file_name = "hwk_branchen"
+    """ google """
+    # keys = [
+    #     "business_card",
+    #     "Firma",
+    #     "Ansprechpartner",
+    #     "Telefon",
+    #     "Fax",
+    #     "Addresse",
+    #     "Internet",
+    #     "Objektkategorie",
+    #     "Maßnahme",
+    #     "Branche",
+    #     "Leistungen",
+    #     "Zertifikate",
+    #     "Objektdaten",
+    # ]
+    # header = [
+    #     "Typ",
+    #     "Firma",
+    #     "Ansprechpartner",
+    #     "Telefon",
+    #     "Fax",
+    #     "Addresse",
+    #     "Internet",
+    #     "Objektkategorie",
+    #     "Maßnahme",
+    #     "Branche",
+    #     "Leistungen",
+    #     "Zertifikate",
+    #     "Objektdaten",
+    # ]
+    """ scraper """
     keys = [
-        "business_card",
         "Firma",
-        "Ansprechpartner",
+        "Ort",
+        "PLZ",
+        "StrasseUndNr",
         "Telefon",
         "Fax",
-        "Addresse",
+        "Handy",
+        "Email",
         "Internet",
-        "Objektkategorie",
-        "Maßnahme",
         "Branche",
-        "Leistungen",
-        "Zertifikate",
-        "Objektdaten",
+        "ZFID",
     ]
     header = [
-        "Typ",
         "Firma",
-        "Ansprechpartner",
+        "Ort",
+        "PLZ",
+        "StrasseUndNr",
         "Telefon",
         "Fax",
-        "Addresse",
+        "Handy",
+        "Email",
         "Internet",
-        "Objektkategorie",
-        "Maßnahme",
         "Branche",
-        "Leistungen",
-        "Zertifikate",
-        "Objektdaten",
+        "ZFID",
     ]
 
     custom_export(

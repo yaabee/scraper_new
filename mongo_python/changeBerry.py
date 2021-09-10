@@ -112,35 +112,59 @@ hkls = dict(
     WZCode='1',
 )
 
-zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
-col = client_5['scrp_listen']['hwk_neu']
-cursor = col.find({'ZFID': {'$exists': True}})
 
-for i in cursor:
-    print(i['ZFID'])
-    ds = zf.find_one({'ZFID': i['ZFID']})
-    # zf.update_one(
-    #   {'ZFID': i['ZFID']},
-    #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
-    # )
+def main(db_name, col_name, target_db, target_col, target_mongo, query, _set):
 
-    zf.update_one(
-        {'ZFID': i['ZFID']},
-        {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
-    )
+    if target_mongo == 5:
+        col = client_239[db_name][col_name]
+        target_col = client_239[db_name][col_name]
+        cursor = col.find(query)
 
-    # zf.update_one(
-    #   {'ZFID': i['ZFID']},
-    #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
-    # )
+        for i in cursor:
+            pass
 
-    # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
+    if target_mongo == 239:
+        pass
 
-    # delete field
-    # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
+    zf = client_239[db_name][col_name]
+    col = client_5['scrp_listen']['hwk_neu']
+    cursor = zf.find({'ZFID': {'$exists': True}})
 
-    # remove from array
-    # zf.update_one(
-    #     {'ZFID': i['ZFID']},
-    #     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
-    # )
+    for i in cursor:
+        print(i['ZFID'])
+        ds = zf.find_one({'ZFID': i['ZFID']})
+        # zf.update_one(
+        #   {'ZFID': i['ZFID']},
+        #   {'$pull': {'Meta.BranchenDetails.Extern': energieberater}}
+        # )
+
+        zf.update_one(
+            {'ZFID': i['ZFID']},
+            {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
+        )
+
+        # zf.update_one(
+        #   {'ZFID': i['ZFID']},
+        #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
+        # )
+
+        # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
+
+        # delete field
+        # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
+
+        # remove from array
+        # zf.update_one(
+        #     {'ZFID': i['ZFID']},
+        #     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
+        # )
+
+
+if __name__ == '__main__':
+
+    db_name = 'odin'
+    col_name = 'ZOObjekte'
+    target_mongo = 239
+    query = {}
+    _set = {}
+    main(db_name, col_name, target_db, target_col, query, _set)

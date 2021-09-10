@@ -1,4 +1,4 @@
-#add parent-module-path
+# add parent-module-path
 from re import S
 from bs4 import BeautifulSoup
 import requests
@@ -6,40 +6,44 @@ from pprint import pprint
 from pymongo import MongoClient, errors
 import time
 
+
 def check_website(website):
-  if 'https://www' in website:
-    website = website.replace('https://www.', 'www.info@')
-  elif 'https://' in website:
-    website = website.replace('https://', 'www.info@')
-  elif 'http://www' in website:
-    website = website.replace('http://www.', 'www.info@')
-  elif 'http://' in website:
-    website = website.replace('http://', 'www.info@')
-  elif 'www.' in website and not 'info@' in website:
-    website = website.replace('www.', 'www.info@')
-  elif 'www.' not in website:
-    website = f'www.info@{website}'
-  if '.de/' in website or '.com/' in website or '.nl/' in website:
-    ind = website.index('/')
-    website = website[:ind]
-  try: 
-    url = 'http://192.168.100.239:9099/003mailcheck' 
-    payload = dict(firma_email=website)
-    return requests.post(url, json=payload).json()
-  except Exception as e:
-    print(f'error: {e}')
+    if 'https://www' in website:
+        website = website.replace('https://www.', 'www.info@')
+    elif 'https://' in website:
+        website = website.replace('https://', 'www.info@')
+    elif 'http://www' in website:
+        website = website.replace('http://www.', 'www.info@')
+    elif 'http://' in website:
+        website = website.replace('http://', 'www.info@')
+    elif 'www.' in website and not 'info@' in website:
+        website = website.replace('www.', 'www.info@')
+    elif 'www.' not in website:
+        website = f'www.info@{website}'
+    if '.de/' in website or '.com/' in website or '.nl/' in website:
+        ind = website.index('/')
+        website = website[:ind]
+    try:
+        url = 'http://192.168.100.239:9099/003mailcheck'
+        payload = dict(firma_email=website)
+        return requests.post(url, json=payload).json()
+    except Exception as e:
+        print(f'error: {e}')
+
 
 def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
-  client = MongoClient(mdb_uri, 27017, maxPoolSize=500)
-  db = client[datenbank]
-  collection = db[collection]
-  collection.insert_one(datensatz)
+    client = MongoClient(mdb_uri, 27017, maxPoolSize=500)
+    db = client[datenbank]
+    collection = db[collection]
+    collection.insert_one(datensatz)
+
 
 def get_clean_telefon(url, tele):
     payload = {
         'firma_telefon': tele
     }
     return requests.post(url, json=payload).json()
+
 
 def get_geodata(url, plz, strasseundnr, ort):
     data = {
@@ -53,6 +57,7 @@ def get_geodata(url, plz, strasseundnr, ort):
     }
     return requests.post(url, json=data)
 
+
 def remove_escapechars(string_value):
     '''
     remove escape chars from given field
@@ -63,8 +68,9 @@ def remove_escapechars(string_value):
     translator = str.maketrans('', '', escapes)
     return string_value.translate(translator)
 
+
 def energie_effizienz_experten(url):
-    #private Bauherrern
+    # private Bauherrern
     req = requests.get(url)
     soup = BeautifulSoup(req.text, 'html.parser')
     experten_db = soup.find_all('div', class_='expertendb_single')
@@ -81,7 +87,8 @@ def energie_effizienz_experten(url):
             tele = tele.text
         else:
             tele = 'xxxxx'
-        tele = get_clean_telefon('http://192.168.100.239:9099/005phonenumbers', tele)
+        tele = get_clean_telefon(
+            'http://192.168.100.239:9099/005phonenumbers', tele)
         complete_dataset['Telefon'] = tele['firma_telefon']
         complete_dataset['TelefonRaw'] = tele['firma_telefon_clean']
         try:
@@ -106,7 +113,8 @@ def energie_effizienz_experten(url):
         strasseundnr = split_adress[1]
         plz = split_adress[2][:5]
         ort = split_adress[2][6:]
-        geodata = get_geodata('http://192.168.100.239:9099/geocoder', plz, strasseundnr, ort).json()['result']['geocode']
+        geodata = get_geodata('http://192.168.100.239:9099/geocoder',
+                              plz, strasseundnr, ort).json()['result']['geocode']
         try:
             if homepage := single.find('div', class_='www'):
                 page = homepage.find('a')
@@ -149,8 +157,9 @@ def energie_effizienz_experten(url):
             studium = 'xxxxx'
         complete_dataset['Berufsgruppe'] = remove_escapechars(studium)
         if foerderung := single.find('div', class_='fp fp--privat'):
-            small_col = foerderung.find('div', class_='c-column c-column--small')
-            #Energieberatung
+            small_col = foerderung.find(
+                'div', class_='c-column c-column--small')
+            # Energieberatung
             energieberatung = small_col.find_all('dd')
             img_ = small_col.find_all('img')
             for a, b in zip(energieberatung, img_):
@@ -160,8 +169,9 @@ def energie_effizienz_experten(url):
                     b = False
                 titel = '_'.join(a.text.split(' '))
                 complete_dataset[titel] = b
-            large_col = foerderung.find('div', class_='c-column c-column--large')
-            #Bundesfoerderung(Wohngebaeude)
+            large_col = foerderung.find(
+                'div', class_='c-column c-column--large')
+            # Bundesfoerderung(Wohngebaeude)
             bafa = large_col.find_all('dd')
             checks = large_col.find_all('img')
             for i, j in zip(bafa, checks):
@@ -173,24 +183,25 @@ def energie_effizienz_experten(url):
                 complete_dataset[titel] = j
         try:
             insert_new_dataset_into_mdb(mdb_uri="192.168.100.5",
-                                datenbank='scrp_listen',
-                                collection='energie_effizienz_full',
-                                datensatz=complete_dataset)
+                                        datenbank='scrp_listen',
+                                        collection='energie_effizienz_full_06092021',
+                                        datensatz=complete_dataset)
         except errors.DuplicateKeyError:
             print('had duplicatekey error!!!!!!!!!!!!!!!!!!!!')
             continue
         pprint(complete_dataset, indent=2)
         print('==========================================')
 
-if __name__ == '__main__':
-    #ca10k
-    #ca3k
 
-    # url_unternehmen_kommunen = f'https://www.energie-effizienz-experten.de/fuer-unternehmen-und-kommunen/finden-sie-experten-in-ihrer-naehe/suchergebnis?tx_wwdenaexpertendb_pi1%5Bcontroller%5D=Search&tx_wwdenaexpertendb_pi1%5Bpage%5D={n}'
+if __name__ == '__main__':
+    # ca10k
+    # ca3k
+
+    # url_private_bauherren = f'https://www.energie-effizienz-experten.de/fuer-private-bauherren/finden-sie-experten-in-ihrer-naehe/suchergebnis?tx_wwdenaexpertendb_pi1%5Bcontroller%5D=Search&tx_wwdenaexpertendb_pi1%5Bpage%5D={n}'
     n = 0
-    while n <= 686: 
+    while n <= 686:
+        url_unternehmen_kommunen = f'https://www.energie-effizienz-experten.de/fuer-unternehmen-und-kommunen/finden-sie-experten-in-ihrer-naehe/suchergebnis?tx_wwdenaexpertendb_pi1%5Bcontroller%5D=Search&tx_wwdenaexpertendb_pi1%5Bpage%5D={n}'
         print(n)
-        url_private_bauherren = f'https://www.energie-effizienz-experten.de/fuer-private-bauherren/finden-sie-experten-in-ihrer-naehe/suchergebnis?tx_wwdenaexpertendb_pi1%5Bcontroller%5D=Search&tx_wwdenaexpertendb_pi1%5Bpage%5D={n}'
-        energie_effizienz_experten(url_private_bauherren)
+        energie_effizienz_experten(url_unternehmen_kommunen)
         time.sleep(1.5)
         n += 1

@@ -56,7 +56,7 @@ def zfid_einspielen(db_name, col_name):
         # check if strassen-id
         payload_geocoder = {
             "Land": "",
-            "Ort": i['Ort'],
+            "Ort": '',
             "PLZ": i['PLZ'],
             "StrasseUndNr": i['StrasseUndNr'],
             "options": {
@@ -66,13 +66,16 @@ def zfid_einspielen(db_name, col_name):
         check = requests.post(
             'http://192.168.100.239:9099/geocoder', json=payload_geocoder).json()
         if check['ok']:
+            # handy aber kein tele
+            if not i['Telefon'] and i['Handy']:
+                i['Telefon'] = i['Handy']
             payload_google = dict(
-                Firma=remove_escapechars(i['name']),
+                Firma=remove_escapechars(i['Firma']),
                 Straße=remove_escapechars(i['StrasseUndNr']),
                 PLZ=i['PLZ'],
                 Ort=remove_escapechars(i['Ort']),
                 Telefon=get_clean_telefon(i['Telefon'])['firma_telefon'],
-                Internet=check_website(i['website'])['domain'],
+                Internet=check_website(i['Internet'])['domain'],
                 # Fax=i['Fax'],
                 Fax='xxxxx',
                 options={
@@ -100,6 +103,6 @@ def zfid_einspielen(db_name, col_name):
 
 
 if __name__ == '__main__':
-    db_name = 'GoogleApi'
-    col_name = 'ingenieur'
+    db_name = 'scrp_listen'
+    col_name = 'hwk_neu_neu'
     zfid_einspielen(db_name, col_name)

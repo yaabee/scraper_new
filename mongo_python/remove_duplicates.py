@@ -17,7 +17,7 @@ def remove_duplicates(db_name, col_name, cache_key_name):
     '''
     client = MongoClient('192.168.100.5:27017')
     collection = client[db_name][col_name]
-    cursor = collection.find({})
+    cursor = collection.find({'ZFID': {'$exists': True}})
     cache = {}
     for i in cursor:
         if i[cache_key_name] in cache:
@@ -34,6 +34,6 @@ def remove_duplicates(db_name, col_name, cache_key_name):
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'hwk_neu'
+    col_name = 'hwk_neu_neu'
     use_as_cache_key = 'ZFID'
     remove_duplicates(db_name, col_name, use_as_cache_key)

@@ -99,7 +99,7 @@ def main(url):
 
 if __name__ == "__main__":
     # offset = 7400
-    offset = 6910
+    offset = 7260
     while 1:
         url = f"https://www.hwk-ufr.de/betriebe/suche-78,0,bdbsearch.html?limit=10&search-searchterm=&search-local=&search-job=&search-filter-training=&search-filter-zipcode=(&search-filter-radius=20&search-filter-jobnr=&search-filter-experience=&offset={offset}"
         print('ooooooooooooooooooooooff', offset)
