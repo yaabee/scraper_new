@@ -112,11 +112,17 @@ hkls = dict(
     WZCode='1',
 )
 
-col = client_5['AutoImport']['ResultNachOdin']
-cursor = list(col.find({}))
+# col = client_5['AutoImport']['ResultNachOdin']
+col = client_239['odin']['ZOObjekte']
+target = client_5['AutoImport']['odin_test']
+cursor = list(col.find({}).limit(200))
 
 for i in cursor:
-    col.update_one({'ZOID': i['ZOID']}, {'$set': {'PruefungNotwending': True}})
+    del i['_id']
+    i.update({'PruefungNotwending': True})
+    insert = target.insert_one(i)
+    print(insert.inserted_id)
+
 # print(mod_2_zoids)
 
     # ds = zf.find_one({'ZFID': i['ZFID']})

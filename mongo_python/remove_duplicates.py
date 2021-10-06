@@ -34,6 +34,6 @@ def remove_duplicates(db_name, col_name, cache_key_name):
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'hwk_neu_neu'
+    col_name = 'energie_effizienz_full_06092021'
     use_as_cache_key = 'ZFID'
     remove_duplicates(db_name, col_name, use_as_cache_key)

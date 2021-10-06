@@ -31,8 +31,8 @@ def custom_export(db_name, col_name, file_name, keys, query, header):
 if __name__ == "__main__":
     query = {}
     db_name = "scrp_listen"
-    col_name = "hwk_neu"
-    file_name = "hwk_branchen"
+    col_name = "energie_effizienz_full_06092021"
+    file_name = "energie_effizienz_neu"
     """ google """
     # keys = [
     #     "business_card",
@@ -65,30 +65,54 @@ if __name__ == "__main__":
     #     "Objektdaten",
     # ]
     """ scraper """
+    # keys = [
+    #     "Firma",
+    #     "Ort",
+    #     "PLZ",
+    #     "StrasseUndNr",
+    #     "Telefon",
+    #     "Fax",
+    #     "Handy",
+    #     "Email",
+    #     "Internet",
+    #     "Branche",
+    #     "ZFID",
+    # ]
+    # header = [
+    #     "Firma",
+    #     "Ort",
+    #     "PLZ",
+    #     "StrasseUndNr",
+    #     "Telefon",
+    #     "Fax",
+    #     "Handy",
+    #     "Email",
+    #     "Internet",
+    #     "Branche",
+    #     "ZFID",
+    # ]
+    """ Energie-Effizienz """
     keys = [
         "Firma",
         "Ort",
         "PLZ",
         "StrasseUndNr",
         "Telefon",
-        "Fax",
-        "Handy",
+        "Effizienzhaus_(KfW)",
+        "Effizienzhaus_Denkmal_(und_besonders_erhaltenswerte_Bausubstanz)_(KfW)",
+        "Einzelmaßnahmen",
+        "Energieberatung_für_Wohngebäude",
+        "Fenster_und_Türen",
+        "Heizung",
+        "Lüftung",
+        "Wärmedämmung",
+        "Berufsgruppe",
+        "Homepage",
         "Email",
-        "Internet",
-        "Branche",
-        "ZFID",
-    ]
-    header = [
-        "Firma",
-        "Ort",
-        "PLZ",
-        "StrasseUndNr",
-        "Telefon",
-        "Fax",
-        "Handy",
-        "Email",
-        "Internet",
-        "Branche",
+        "name",
+        "StrassenId",
+        "branche",
+        "Neuangelegt",
         "ZFID",
     ]
 
@@ -98,5 +122,5 @@ if __name__ == "__main__":
         file_name=file_name,
         keys=keys,
         query=query,
-        header=header,
+        header=keys,
     )

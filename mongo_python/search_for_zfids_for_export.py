@@ -17,7 +17,7 @@ def make_xlsx(array, file_name):
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'hwk_neu'
+    col_name = 'energie_effizienz_full_06092021'
     # search_for_plz = {'PLZ': {'$regex': r'^97'}}
     query = {'ZFID': {'$exists': True}
              # '$or': [
@@ -54,5 +54,5 @@ if __name__ == '__main__':
              }
 
     zfid_array = search_for_zfids_for_export(db_name, col_name, query)
-    file_name = 'hwk'
+    file_name = 'energie_effizienz'
     make_xlsx(zfid_array, file_name)

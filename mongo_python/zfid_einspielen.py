@@ -75,7 +75,8 @@ def zfid_einspielen(db_name, col_name):
                 PLZ=i['PLZ'],
                 Ort=remove_escapechars(i['Ort']),
                 Telefon=get_clean_telefon(i['Telefon'])['firma_telefon'],
-                Internet=check_website(i['Internet'])['domain'],
+                # Internet=check_website(i['Internet'])['domain'],
+                Internet='xxxxx',
                 # Fax=i['Fax'],
                 Fax='xxxxx',
                 options={
@@ -104,5 +105,5 @@ def zfid_einspielen(db_name, col_name):
 
 if __name__ == '__main__':
     db_name = 'scrp_listen'
-    col_name = 'hwk_neu_neu'
+    col_name = 'energie_effizienz_full_06092021'
     zfid_einspielen(db_name, col_name)
