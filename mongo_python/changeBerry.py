@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import ssl
+import pprint
 
 client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
@@ -112,42 +113,49 @@ hkls = dict(
     WZCode='1',
 )
 
-# col = client_5['AutoImport']['ResultNachOdin']
 col = client_239['odin']['ZOObjekte']
-target = client_5['AutoImport']['odin_test']
-cursor = list(col.find({}).limit(200))
+col_zob = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 
+allgemeineBranchenliste = list(
+    client_239['staticdata']['AllgemeineVorlagen_Branchenliste'].find({}))
+cache = {v['BranchenID']: v['Branche'] for v in allgemeineBranchenliste}
+
+pipeline = [
+    {'$match': {
+        'PruefungNotwendig': True
+    }},
+    # {'$limit': 10}
+]
+
+cursor = list(client_239['odin']['ZOObjekte_yanghi'].aggregate(pipeline))
 for i in cursor:
-    del i['_id']
-    i.update({'PruefungNotwending': True})
-    insert = target.insert_one(i)
-    print(insert.inserted_id)
+    client_239['odin']['ZOObjekte_yanghi'].update_one({'ZOID': i['ZOID']}, {
+        '$set': {
+            'PruefungNotwendig': False
+        }
+    })
 
-# print(mod_2_zoids)
+# ds = zf.find_one({'ZFID': i['ZFID']})
+# zf.update_one(
+#     {'ZOID': i['ZOID']},
+#     {'$set': {'IstDublette': True, 'DubletteZu': []}}
+# )
 
-    # ds = zf.find_one({'ZFID': i['ZFID']})
-    # zf.update_one(
-    #     {'ZOID': i['ZOID']},
-    #     {'$set': {'IstDublette': True, 'DubletteZu': []}}
-    # )
+# zf.update_one(
+#     {'ZFID': i['ZFID']},
+#     {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
+# )
 
-    # zf.update_one(
-    #     {'ZFID': i['ZFID']},
-    #     {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
-    # )
+# zf.update_one(
+#   {'ZFID': i['ZFID']},
+#   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
+# )
 
-    # zf.update_one(
-    #   {'ZFID': i['ZFID']},
-    #   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
-    # )
+# delete field
+# {"$unset": {"Meta.BranchenDetails.Extern": ""}}
 
-    # firmenadresse.update_one( #   {'ZFID': i['ZFID'], 'Meta.Branchen': []}, #   {'$set': {'Meta.Branchen': dict(Access=[], Extern=[], Stichwoerter=[])}} # )
-
-    # delete field
-    # {"$unset": {"Meta.BranchenDetails.Extern": ""}}
-
-    # remove from array
-    # zf.update_one(
-    #     {'ZFID': i['ZFID']},
-    #     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
-    # )
+# remove from array
+# zf.update_one(
+#     {'ZFID': i['ZFID']},
+#     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
+# )

@@ -1,7 +1,9 @@
-import ssl
+
 from pymongo import MongoClient
+import ssl
 import requests
 
+client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
                          username='mongoroot',
                          password='9gCaPFhotG2CNEoBRdgA',
@@ -11,10 +13,34 @@ client_239 = MongoClient('192.168.100.239:27017',
                          ssl_cert_reqs=ssl.CERT_NONE)
 
 
-def main():
-    # requests.post('192.168.100.104:5555/zobListe/', json=payload)
-    pass
+zf_239 = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
+
+odin_yb = client_239['odin']['ZOObjekte_yanghi']
+
+pipeline = [
+    {'$unwind': '$Meta.BranchenDetails.Stichwoerter'},
+    {'$group': {'_id': '$Meta.BranchenDetails.Stichwoerter'}}
+]
+
+pipelineObjektdubs = [
+    {"$project": {
+        "_id": 1,
+        "count": {"$size": "$PotenzielleDubletten"
+                  }
+    }
+    },
+    {"$match": {
+        "count": {
+            "$gt": 0
+        }
+    }
+    }
+]
 
 
-if __name__ == '__main___':
-    main()
+agg = list(odin_yb.aggregate(pipeline=pipelineObjektdubs))
+req = requests.post("http://192.168.100.104:5555/odinExport/",
+                    json={"zoid": ",".join([str(x["_id"]) for x in agg]), "ansprechpartner_switch": False})
+
+with open('objekte_dubs.xlsx', mode='wb') as localfile:
+    localfile.write(req.content)
