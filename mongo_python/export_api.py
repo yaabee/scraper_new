@@ -25,6 +25,7 @@ pipeline = [
 pipelineObjektdubs = [
     {"$project": {
         "_id": 1,
+        "Hausnummer": "$Hausnummer",
         "count": {"$size": "$PotenzielleDubletten"
                   }
     }
@@ -32,15 +33,22 @@ pipelineObjektdubs = [
     {"$match": {
         "count": {
             "$gt": 0
-        }
+        },
+        "Hausnummer": {'$ne': ''}
     }
     }
 ]
 
+pipeline_dubs = [
+
+]
+
 
 agg = list(odin_yb.aggregate(pipeline=pipelineObjektdubs))
+print(len(agg))
 req = requests.post("http://192.168.100.104:5555/odinExport/",
                     json={"zoid": ",".join([str(x["_id"]) for x in agg]), "ansprechpartner_switch": False})
 
-with open('objekte_dubs.xlsx', mode='wb') as localfile:
+#speichert in scraper_new
+with open('objekte_dubs_hausnummer.xlsx', mode='wb') as localfile:
     localfile.write(req.content)

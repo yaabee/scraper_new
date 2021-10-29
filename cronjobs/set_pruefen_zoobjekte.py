@@ -34,6 +34,7 @@ def setDubs():
                     }
                 }
             }, {
+
                 '$match': {
                     'count': {
                         '$gt': 0
