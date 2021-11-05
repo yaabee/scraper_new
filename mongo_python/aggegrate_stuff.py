@@ -4,9 +4,6 @@ import ssl
 import requests
 import pprint
 
-import jsonpatch
-import json
-
 client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
                          username='mongoroot',
@@ -17,10 +14,28 @@ client_239 = MongoClient('192.168.100.239:27017',
                          ssl_cert_reqs=ssl.CERT_NONE)
 
 
+# client_solaris = MongoClient(
+#     "192.168.100.8:27018",
+#     serverSelectionTimeoutMS=1000,
+#     username="zo_objekt_reader",
+#     password="",
+#     authSource="solaris",
+#     authMechanism="SCRAM-SHA-256",
+# )
+
+
+client_zo_reader = MongoClient('192.168.100.8:27017',
+                         username='zo_objekt_reader',
+                         password='s5FLwMszMHSMck4KL6Pm',
+                         authSource='zo_objekt',
+                         authMechanism='SCRAM-SHA-256',
+                         tls=True,
+                         tlsCAFile='/etc/ssl/certs/teleaktiv_rootCA.pem')
+
+
 zf_239 = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 odin_yb = client_239['odin']['ZOObjekte_yanghi']
 scrp_listen = client_5['scrp_listen']['heinze_zfid']
-# zf_yb = ['ZentralerFirmenstamm']['ZentralerFirmenstamm_yan']
 staticdata_access = client_239['staticdata']['AllgAllgemeineVorlagen_Branchenliste']
 staticdata_dis = client_239['staticdata']['automatischeBranche']
 original_zf = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm2']
@@ -69,17 +84,26 @@ pipeline_branchev = [
 ]
 
 pipeline_pruefen = [
-    {'$project': {
-        '_id': 1,
-        'PruefungNotwendig': '$PruefungNotwendig',
-        'DubletteZu': '$DubletteZu',
-        'count': {'$size': '$DubletteZu'}
+    {'$match': {
+        'Hausnummer': {'$ne': ''},
+        'Strasse': {'$ne': ''},
+        'PLZ': {'$ne': ''},
+    }},
+    {'$group': {
+        '_id': {
+            'Strasse': '$Strasse',
+            'Hausnummer': '$Hausnummer',
+            'PLZ': '$PLZ',
+        },
+        'count': {'$sum': 1},
+        'ZOIDS': {'$addToSet': '$_id'}
     }},
     {'$match': {
         'count': {
-            '$gt': 0
+            '$gt': 1
         },
     }},
+    # {'$limit': 10}
 
 ]
 
@@ -115,29 +139,19 @@ pipeline_branchendetails = [
     },
 ]
 
-agg = list(zf_239.aggregate(pipeline_branchendetails))
+pipeline_zielgruppefalschgrund = [
+    {'$match': {
+        'Meta.ZielgruppeFalschGrund': {'$size': 2}
+    }},
+    {'$project': {
+        '_id': 1,
+        'Zielgruppe': '$Meta.ZielgruppeFalschGrund',
+    }},
+    {'$limit': 10}
+]
 
-for i in agg:
+agg = list(client_239['odin']['ZOObjekte'].aggregate(pipeline_pruefen))
+# agg = list(client_zo_reader['zo_objekt']['zo_objekt'].aggregate(pipeline_pruefen))
+
+for i in agg[:10]:
     pprint.pprint(i)
-
-
-#         if i['ap_tel'] != 'xxxxx':
-#             payload = {
-#   "Abteilung": "Einkauf",
-#   "Anrede": "Herr",
-#   "Datenherkunft": "Velux",
-#   "Email": "max.zeschitz@gmail.com",
-#   "Fax": "0931803269",
-#   "KeinKontaktErwuenscht": "Wahr",
-#   "Mobil": "0175",
-#   "Nachname": "Grasser",
-#   "Position": "Geschäftsführung",
-#   "Telefon": "0931803268",
-#   "Titel": "Dr.",
-#   "Vorname": i['ap_name'],
-#   "ZFID": "57b0a7f52db2cb4c120137e1",
-#   "options": {
-#     "returnDocument": True
-#   }
-# }
-#             requests.post('http://192.168.100.239:9099/zf_ansprechpartner_neuanlage', )
