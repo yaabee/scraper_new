@@ -1,4 +1,5 @@
 
+from types import coroutine
 from pymongo import MongoClient
 import ssl
 import requests
@@ -16,34 +17,23 @@ client_239 = MongoClient('192.168.100.239:27017',
 
 zf_239 = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 
-odin_yb = client_239['odin']['ZOObjekte_yanghi']
-scrp_listen = client_5['scrp_listen']['heinze_zfid_back']
 
+access = zf_239.find({'IstDublette': False,
 
+  'Meta.BranchenDetails.Homepage': {'$elemMatch': {'WZCode': {'$in': [227111200,
+                                                                    '227111200']}}},
+  'Meta.IstGesperrt': False,
+  'Meta.IstInaktiv': False})
 
-# print(odin_yb.find_one({'ZOID': '530f5e39fa46343b048b48ec'})['Baukosten'])
+# print(len(list(access)))
 
+access_nin = zf_239.find({'IstDublette': False,
 
-pipeline = [
-    {'$match': {
-        'ZOID': '530f5e39fa46343b048b48ec'
-    }},
-    {
-        '$set': {'Baukosten': 123123}
-    }, ]
+  'Meta.BranchenDetails.Homepage': {'$elemMatch': {'WZCode': {'$in': [227111200,
+                                                                    '227111200']}}},
+  'Meta.IstGesperrt': False,
+  'Meta.IstInaktiv': False, 'Meta.Branchen': {'$nin': [227111200,
+                                                                    '227111200']}})
+                                                                  
+print(len(list(access_nin)))
 
-pipeline_gesamtanzahl = [
-    {'$match': {
-        'Meta.Nettokontakt.Gesamtanzahl': {'$exists': True}
-    }}
-]
-agg = list(zf_239.aggregate(pipeline_gesamtanzahl))
-print(len(agg))
-for i in agg:
-    # print(i['Meta']['Terminvormerkung'])
-    pprint.pprint(i)
-    zf_239.update_one({'ZFID': i['ZFID']}, {
-                      '$set': {'Meta.Nettokontakt': {'Zuletzt': '', 'GesamtAnzahl': 0}}})
-agg = list(zf_239.aggregate(pipeline_gesamtanzahl))
-print(len(agg))
-# print(odin_yb.find_one({'ZOID': '530f5e39fa46343b048b48ec'})['Baukosten'])

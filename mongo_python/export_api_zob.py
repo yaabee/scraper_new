@@ -1,4 +1,3 @@
-
 from pymongo import MongoClient
 import ssl
 import requests
@@ -68,21 +67,61 @@ pipeline_pruefen = [
             '$gt': 1
         },
     }},
-    # {'$limit': 1000}
-
 ]
-# ",".join([str(x["_id"]) for x in agg])
+
+pipeline_energie_effi_dubs = [
+    {
+        '$group': {
+            '_id': {
+                'Firma': '$Firma',
+                'Telefon': '$Telefon',
+                'StrasseUndNr': '$StrasseUndNr',
+                'PLZ': '$PLZ',
+                'name': '$name',
+            },
+            'uniqueIds': {'$addToSet': '$ZFID'},
+            'count': {'$sum': 1},
+        }
+    },
+    {
+        '$project': {
+            'size': {'$size': '$uniqueIds'},
+            '_id': 1,
+            'uniqueIds': 1,
+            }
+    },
+    { '$match': {
+        'size': {'$gt': 1}
+    }},
+]
+
+pipeline_get_zfid = [
+  {'$match': {'ZFID': {'$exists': True}}},
+  {'$project': {
+    '_id': '$ZFID'
+  }}
+]
+
+pipeline_dublette_zu = [
+  {'$project': {'_id': 1, 'DubletteZu': '$DubletteZu', 'size': {'$size': '$DubletteZu'}}},
+  {'$match': {
+    'size': {'$gt': 0}
+  }}
+]
+
+pipeline_facility = [
+    {'$match': {'ZFID': {'$exists': True}}}
+]
 
 
-# agg = list(client_8['zo_objekt']['zo_objekt'].aggregate(pipeline=pipeline_pruefen))
-agg = list(client_239['odin']['ZOObjekte'].aggregate(pipeline=pipeline_pruefen))
-zoids = []
-for i in agg:
-    for k in i['ZOIDS']:
-        zoids.append(str(k))
-req = requests.post("http://192.168.100.104:5555/odinExport/",
-                    json={"zoid": ','.join(zoids), "ansprechpartner_switch": False})
+agg = list(client_5['GoogleApi']['google_Facility_Facility'].aggregate(pipeline=pipeline_facility))
+# agg = list(client_5['scrp_listen']['energie_effizienz_full_06092021'].aggregate(pipeline=pipeline_get_zfid))
+zfids = []
+for i in agg[:10]:
+  print(i['_id'])
+req = requests.post("http://localhost:5555/firmenadresse/",
+                    json={"zfid": ','.join([x['ZFID'] for x in agg]), "ansprechpartner_switch": False})
 
 #speichert in scraper_new
-with open('objekte_dubs_odin.xlsx', mode='wb') as localfile:
+with open('Google_Facility.xlsx', mode='wb') as localfile:
     localfile.write(req.content)

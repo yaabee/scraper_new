@@ -14,7 +14,6 @@ client_5 = MongoClient('192.168.100.5:27017')
 
 #'Anzahl Mitarbeiter'
 
-
 def main(db, col, fieldname, value, which_client):
     client = client_5
     if which_client == 239:
@@ -24,10 +23,10 @@ def main(db, col, fieldname, value, which_client):
 
 
 if __name__ == '__main__':
-    db = 'ZentralerFirmenstamm'
-    col = 'ZentralerFirmenstamm'
-    fieldname = 'Meta.BusinessStatus'
-    value = []
-    which_client = 5
+    db = 'odin'
+    col = 'Cronjobs'
+    fieldname = 'BeteiligteFirmen'
+    value = 'nur'
+    which_client = 239
 
     main(db, col, fieldname, value, which_client)

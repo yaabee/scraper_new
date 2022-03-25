@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import ssl
 import pprint
 
-
+#zfid check cronjob
 client_5 = MongoClient('192.168.100.5:27017')
 client_239 = MongoClient('192.168.100.239:27017',
                          username='mongoroot',

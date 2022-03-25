@@ -150,8 +150,48 @@ pipeline_zielgruppefalschgrund = [
     {'$limit': 10}
 ]
 
-agg = list(client_239['odin']['ZOObjekte'].aggregate(pipeline_pruefen))
+
+
+#tele, strasse, plz, name gleich
+pipeline_energie_effi_dubs = [
+    {
+        '$group': {
+            '_id': {
+                'Firma': '$Firma',
+                'Telefon': '$Telefon',
+                'StrasseUndNr': '$StrasseUndNr',
+                'PLZ': '$PLZ',
+                'name': '$name',
+            },
+            'uniqueIds': {'$addToSet': '$ZFID'},
+            'count': {'$sum': 1},
+        }
+    },
+    {
+        '$project': {
+            'size': {'$size': '$uniqueIds'},
+            '_id': 1,
+            'uniqueIds': 1,
+            }
+    },
+    { '$match': {
+        'size': {'$gt': 1}
+    }},
+]
+
+# agg = list(client_5['scrp_listen']['energie_effizienz_full_06092021'].aggregate(pipeline_energie_effi_dubs))
 # agg = list(client_zo_reader['zo_objekt']['zo_objekt'].aggregate(pipeline_pruefen))
 
-for i in agg[:10]:
-    pprint.pprint(i)
+pipeline = [{'$match': {}}]
+
+agg = list(client_239['odin']['Cronjobs'].aggregate(pipeline))
+
+for i in agg:
+    update = client_239['odin']['Cronjobs'].update_one({'schnellfilter_name': i['schnellfilter_name']}, {'$set': {'MitLeeremBaubeginn': True}})
+    print(i)
+    
+
+
+agg = list(client_239['odin']['Cronjobs'].aggregate(pipeline))
+for k in agg:
+    print(k)

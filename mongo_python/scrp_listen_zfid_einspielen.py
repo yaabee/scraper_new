@@ -1,3 +1,4 @@
+
 from typing import overload
 from pymongo import MongoClient
 import ssl
@@ -52,45 +53,45 @@ def get_clean_telefon(tele):
 def zfid_einspielen(db_name, col_name):
     client = MongoClient('192.168.100.5:27017')
     collection = client[db_name][col_name]
-    cursor = collection.find({'ZFID': {'$exists': False}, 'name': re.compile("Facility", re.IGNORECASE)})
+    cursor = collection.find({'ZFID': {'$exists': False}})
     for i in cursor:
         # check if strassen-id
         payload_geocoder = {
             "Land": "",
-            "Ort": '',
+            "Ort": i['Ort'],
             "PLZ": i['PLZ'],
             "StrasseUndNr": i['StrasseUndNr'],
             "options": {
                 "returnMultiple": False
             }
         }
-        print('i', i)
+        print('==================================================')
+        print('origin', i)
         check = requests.post(
             'http://192.168.100.239:9099/geocoder', json=payload_geocoder).json()
         if check['ok']:
             # handy aber kein tele
-            if not i['Telefon'] and i['Handy']:
+            if not i['Telefon'] and 'Handy' in i and  i['Handy']:
                 i['Telefon'] = i['Handy']
-            payload_google = dict(
-                Firma=remove_escapechars(i['name']),
+            payload_scrp_listen = dict(
+                Firma=remove_escapechars(i['Firma']),
                 Straße=remove_escapechars(i['StrasseUndNr']),
                 PLZ=i['PLZ'],
                 Ort=remove_escapechars(i['Ort']),
                 Telefon=get_clean_telefon(i['Telefon'])['firma_telefon'],
-                # Internet=check_website(i['Internet'])['domain'],
-                Internet='xxxxx',
-                # Fax=i['Fax'],
-                Fax='xxxxx',
+                Internet=check_website(i['Homepage'])['domain'],
+                Fax=i['Fax'],
                 options={
                     "ensureWrite": False,
                     "forceInsert": False,
                     "returnDocument": False,
                 }
             )
-            print(payload_google)
+            print('payload scrp listen', payload_scrp_listen)
             url = "http://192.168.100.239:9099/zf_adresse_neuanlageNachAccess"
-            r = requests.post(url, json=payload_google).json()
-            print(r)
+            r = requests.post(url, json=payload_scrp_listen).json()
+            print('neuanlage', r)
+            print('==================================================')
             # neu, alt flag!
             if r['result']['id']:
                 zfid = r['result']['id']
@@ -102,10 +103,11 @@ def zfid_einspielen(db_name, col_name):
                           'Neuangelegt': r['result']['neuangelegt']}}
             )
         else:
+            print('++++++++++++++++++++++++++++')
             print('no id')
-
+            print('++++++++++++++++++++++++++++')
 
 if __name__ == '__main__':
-    db_name = 'GoogleApi'
-    col_name = 'google_Facility_Facility'
+    db_name = 'scrp_listen'
+    col_name = 'firmenabc'
     zfid_einspielen(db_name, col_name)

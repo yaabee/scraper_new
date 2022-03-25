@@ -127,35 +127,15 @@ pipeline = [
     # {'$limit': 10}
 ]
 
-cursor = list(client_239['odin']['ZOObjekte_yanghi'].aggregate(pipeline))
+pipeline_extern = [
+    {'$match': {'ZFID': {'$exists': True}}}
+]
+
+cursor = list(client_5['scrp_listen']['energie_effizienz_full_06092021'].aggregate(pipeline_extern))
 for i in cursor:
-    client_239['odin']['ZOObjekte_yanghi'].update_one({'ZOID': i['ZOID']}, {
-        '$set': {
-            'PruefungNotwendig': False
+    change = client_239['ZentralerFirmenstamm']['ZentralerFirmenstamm'].update_one({'ZFID': i['ZFID']}, {
+        '$addToSet': {
+            'Meta.BranchenDetails.Extern': {'Herkunft': '1', 'Name': 'energieberater', 'WZCode': 227491104}
         }
     })
-
-# ds = zf.find_one({'ZFID': i['ZFID']})
-# zf.update_one(
-#     {'ZOID': i['ZOID']},
-#     {'$set': {'IstDublette': True, 'DubletteZu': []}}
-# )
-
-# zf.update_one(
-#     {'ZFID': i['ZFID']},
-#     {'$addToSet': {'Meta.BranchenDetails.Extern': technischer_berater}}
-# )
-
-# zf.update_one(
-#   {'ZFID': i['ZFID']},
-#   {'$set': {'Land': False, 'Meta.Inaktiv.Grund': ''}}
-# )
-
-# delete field
-# {"$unset": {"Meta.BranchenDetails.Extern": ""}}
-
-# remove from array
-# zf.update_one(
-#     {'ZFID': i['ZFID']},
-#     {'$pull': {'Meta.BranchenDetails.Extern': hallenbauer_ta}}
-# )
+    print(change.raw_result)
