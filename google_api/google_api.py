@@ -237,7 +237,7 @@ if __name__ == "__main__":
         cache += list(set(cursor))
     print(len(cache))
     count_apicalls = 0
-    suchbegriff = "Facility"
+    suchbegriff = "Solaranlageninstallationsservice"
     plz_or_city = big_citys
     for i in plz_or_city:
         count_apicalls += api_call(

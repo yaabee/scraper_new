@@ -1,6 +1,4 @@
 {
-  "python.linting.pylintEnabled": true,
-  "python.linting.enabled": true,
-  "python.pythonPath": "/home/user199/pp/scraper_new/venv/bin/python3",
-  "python.formatting.provider": "autopep8"
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true
 }

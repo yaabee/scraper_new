@@ -51,25 +51,27 @@ def parse_page(html):
         if 'https://www.gelbeseiten.de/gsbiz/' in a['href']:
           links.append(a['href'])
 
-  n = -10
-  if len(links) == 50:
-    n = -50
-  
-  
-  for i in links[n:]:
-    try:
-      
-      print('=====================================')
-      print(i)
-      page = requests.get(i)
-      soup2 = BeautifulSoup(page.content, 'html.parser')
-      
-      if name := soup2.find('h1', {'class': 'mod-TeilnehmerKopf__name'}):
-        print(name.text)
+  # n = -10
+  # if len(links) == 50:
+  #   n = -50
 
-    except Exception as e:
-      print(e.args)
-      print('niiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiichts')
+  
+  print(len(set(links)))
+  
+  # for i in links[n:]:
+  #   try:
+      
+  #     print('=====================================')
+  #     print(i)
+  #     page = requests.get(i)
+  #     soup2 = BeautifulSoup(page.content, 'html.parser')
+      
+  #     if name := soup2.find('h1', {'class': 'mod-TeilnehmerKopf__name'}):
+  #       print(name.text)
+
+  #   except Exception as e:
+  #     print(e.args)
+  #     print('niiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiichts')
   
 def main():
   popup = driver.find_element_by_xpath("//a[contains(@class,'cmpboxbtn cmpboxbtnyes') ]")
