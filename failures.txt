@@ -1,0 +1,3 @@
+{"options": {"returnDocument": false}, "Firma": "Krynos Einfamilienhaus GmbH & Co. KG", "PLZ": "'10587", "Ort": "Berlin", "Telefon": "030/398009230", "Stra\u00dfe": "Hallerstra\u00dfe 3", "Email": "xxxxx", "Internet": "xxxxx", "Fax": "xxxxx"}
+{"options": {"returnDocument": false}, "Firma": "KULSA Eigenheim GmbH", "PLZ": "99829", "Ort": "H\u00f6rselberg-Hainich", "Telefon": "+49 (36254) 75120", "Stra\u00dfe": "Hauptstra\u00dfe 90 E", "Email": "ralf.wende@towncountry.de", "Internet": "xxxxx", "Fax": "xxxxx"}
+{"options": {"returnDocument": false}, "Firma": "Sven-Christian Endres", "PLZ": "CH-8632", "Ort": "Tann", "Telefon": "--", "Stra\u00dfe": "Kirchenrainstra\u00dfe 22", "Email": "sven-christian.endres@towncountry.de", "Internet": "xxxxx", "Fax": "xxxxx"}

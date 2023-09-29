@@ -1,9 +1,5 @@
-from typing import OrderedDict
-from ordered_set import OrderedSet
 from pymongo import MongoClient
 import pandas as pd
-import ssl
-from collections import OrderedDict
 
 
 def make_xlsx(array, file_name):
@@ -21,6 +17,7 @@ def custom_export(db_name, col_name, file_name, keys, query, header):
         row = []
         for key in keys:
             print(key)
+            print(ds[key])
             if key in ds:
                 if ds[key]:
                     row.append(str(ds[key]))
@@ -30,6 +27,50 @@ def custom_export(db_name, col_name, file_name, keys, query, header):
         export_arr.append(row)
         row = []
     make_xlsx(export_arr, file_name=file_name)
+
+
+"""Fahschule"""
+fahrschule = {
+    "keys": ["Firma", "StrasseUndNr", "PLZ", "Ort", "Telefon", "Mobil"],
+    "header": ["Firma", "StrasseUndNr", "PLZ", "Ort", "Telefon", "Mobil"],
+}
+"""Fahschule"""
+google_api = {
+    "keys": ["Firma", "StrasseUndNr", "PLZ", "Ort", "Telefon", "Website"],
+    "header": ["Firma", "StrasseUndNr", "PLZ", "Ort", "Telefon", "Website"],
+}
+google = {
+    "keys": [
+        "business_card",
+        "Firma",
+        "Ansprechpartner",
+        "Telefon",
+        "Fax",
+        "Addresse",
+        "Internet",
+        "Objektkategorie",
+        "Maßnahme",
+        "Branche",
+        "Leistungen",
+        "Zertifikate",
+        "Objektdaten",
+    ],
+    "header": [
+        "Typ",
+        "Firma",
+        "Ansprechpartner",
+        "Telefon",
+        "Fax",
+        "Addresse",
+        "Internet",
+        "Objektkategorie",
+        "Maßnahme",
+        "Branche",
+        "Leistungen",
+        "Zertifikate",
+        "Objektdaten",
+    ],
+}
 
 
 """baunetz"""
@@ -162,22 +203,22 @@ lithonplus = [
 ]
 
 google_api = {
-    "keys": ["name", "Telefon", "StrasseUndNr", "PLZ", "Ort", "website"],
-    "header": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Internet"],
+    "keys": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Website", 'ZFID'],
+    "header": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Internet", 'ZFID'],
 }
 
 
 if __name__ == "__main__":
     query = {}
-    db_name = "scrp_listen"
-    col_name = "ranking300"
-    file_name = "ranking300"
+    db_name = "GoogleApi"
+    col_name = "google_Intersolar"
+    file_name = "google_Intersolar"
 
     custom_export(
         db_name=db_name,
         col_name=col_name,
         file_name=file_name,
-        keys=baunetz["keys"],
+        keys=google_api["keys"],
         query=query,
-        header=baunetz["header"],
+        header=google_api["header"],
     )

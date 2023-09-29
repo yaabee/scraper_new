@@ -1,9 +1,11 @@
+from typing import TypedDict
 import requests
 import json
 import time
 import ssl
 from pymongo import MongoClient
 from functools import lru_cache
+from pprint import pprint
 
 # 57b083732db2cb4c1200002b
 
@@ -21,7 +23,7 @@ db = client["ZentralerFirmenstamm"]
 firmenadresse = db["ZentralerFirmenstamm"]
 client_5 = MongoClient("192.168.100.5:27017")
 # hallenbau_cache = client_5['GoogleApi']['google_Hallenbau_Hallenbau']
-google_api = client_5['GoogleApi']
+# google_api = client_5["GoogleApi"]
 
 
 def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
@@ -31,32 +33,35 @@ def insert_new_dataset_into_mdb(mdb_uri, datenbank, collection, datensatz):
     collection.insert_one(datensatz)
 
 
-def api_call(plz_or_city, suchbegriff, key, col_name="", place_id=[]):
+class maps_data(TypedDict):
+    pass
+
+
+def api_call(plz_or_city, suchbegriff, key, col_name="", place_id_in_db=[]):
     query = f"query={suchbegriff}+{plz_or_city}"
-    count = 0
-    already_in_db = 0
+    count, already_in_db = 0, 0
     cache = {}
     while True:
         url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?{query}&key={key}"
         req = requests.get(url)
         req_json = json.loads(req.text)
         count += 1
+        print(req_json)
         for i in req_json["results"]:
-            if i["place_id"] not in cache and i['place_id'] not in place_id:
-                # append to result
+            if i["place_id"] not in cache and i["place_id"] not in place_id_in_db:
                 cache[i["place_id"]] = i["place_id"]
                 details = get_places_details(i["place_id"], key)
-                try:
-                    i["Telefon"] = details["international_phone_number"]
-                except KeyError:
-                    i["Telefon"] = "xxxxx"
-                try:
-                    i["website"] = details["website"]
-                except KeyError:
-                    i["website"] = "xxxxx"
-                i["formatted"] = True
+                i["Telefon"] = details.get("international_phone_number", "xxxxx")
+                i["website"] = details.get("website", "xxxxx")
+
                 # add plz, ort, stra
                 splitted_address = i["formatted_address"].split(",")
+
+                i["StrasseUndNr"] = "xxxxx"
+                i["PLZ"] = "xxxxx"
+                i["Ort"] = "xxxxx"
+                i["legit_address"] = False
+
                 if len(splitted_address) == 3:
                     try:
                         plz_und_ort = splitted_address[1].strip().split(" ")
@@ -69,11 +74,7 @@ def api_call(plz_or_city, suchbegriff, key, col_name="", place_id=[]):
                         i["PLZ"] = "xxxxx"
                         i["Ort"] = "xxxxx"
                         i["legit_address"] = False
-                else:
-                    i["StrasseUndNr"] = "xxxxx"
-                    i["PLZ"] = "xxxxx"
-                    i["Ort"] = "xxxxx"
-                    i["legit_address"] = False
+
                 # write too db
                 insert_new_dataset_into_mdb(
                     mdb_uri="192.168.100.5",
@@ -81,7 +82,7 @@ def api_call(plz_or_city, suchbegriff, key, col_name="", place_id=[]):
                     collection=f"google_{suchbegriff}_{col_name}",
                     datensatz=i,
                 )
-            if i['place_id'] in place_id:
+            if i["place_id"] in place_id_in_db:
                 already_in_db += 1
 
         # next page & break con
@@ -92,7 +93,7 @@ def api_call(plz_or_city, suchbegriff, key, col_name="", place_id=[]):
             next_page = req_json["next_page_token"]
             query = f"pagetoken={next_page}"
         else:
-            print('already_in_db', already_in_db)
+            print("already_in_db", already_in_db)
             return count
 
 
@@ -207,43 +208,23 @@ big_citys = [
     "Suhl",
 ]
 
-# PLZ = ['80', '81', '82','83','84','85','86','87',
-#       '90','91','92','93','94','95','96','97']
-
-cursor = list(firmenadresse.find({"PLZ": {"$regex": "^9"}}))
-cache_plz = {}
-plzs = [x["PLZ"] for x in cursor]
-for a in plzs:
-    if (
-        a not in cache_plz
-        and len(a) == 5
-        and a[1] != "8"
-        and a[1] != "9"
-        and a.isnumeric()
-    ):
-        cache_plz[a] = a
-first = list(cache_plz.values())
-# plz = first[::3]
-plz = first
 
 if __name__ == "__main__":
-    # key = 'AIzaSyD_PdV1xDgjKOAurk3SWWsoOb4Lj3Jz8BU'  # franz key
-    key = "AIzaSyDRGsKy8xvOixFivn2bCaaWpgO-SKhyNOo"  # nue key
+    # key = "AIzaSyD_PdV1xDgjKOAurk3SWWsoOb4Lj3Jz8BU"  # franz key
+    # key = "AIzaSyDRGsKy8xvOixFivn2bCaaWpgO-SKhyNOo"  # nue key
+    key = "AIzaSyB4FQ8AkpBHa_5PXlhMpfylActZlZVKwvw"  # nue neu!
 
-    db = client_5['GoogleApi']
+    db = client_5["GoogleApi"]
     cache = []
     for col in db.list_collection_names():
-        cursor = db[col].distinct('place_id')
+        cursor = db[col].distinct("place_id")
         cache += list(set(cursor))
-    print(len(cache))
     count_apicalls = 0
-    suchbegriff = "Solaranlageninstallationsservice"
+    suchbegriff = "energieberater"
     plz_or_city = big_citys
     for i in plz_or_city:
         count_apicalls += api_call(
-            i, suchbegriff,
-            key, col_name=suchbegriff,
-            place_id=cache
+            i, suchbegriff, key, col_name=suchbegriff, place_id_in_db=cache
         )
         final_result = dict(anzahl_api_calls=count_apicalls)
         print(final_result)
