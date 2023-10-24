@@ -1,4 +1,4 @@
-from mongo_connections import client_8
+from module.mongo_connections import client_8
 
 
 cursor = client_8["ZentralerFirmenstamm"]["ZentralerFirmenstamm"].find({"Telefon": {"$type": "array"}})

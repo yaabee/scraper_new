@@ -15,3 +15,4 @@ def is_geo_valid(land: str, ort: str, plz: str, strasse_und_nr: str) -> bool:
     if check["ok"]:
         return True
     return False
+

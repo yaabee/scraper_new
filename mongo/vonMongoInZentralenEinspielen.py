@@ -1,4 +1,4 @@
-from mongo_connections import ZF_8, client_5
+from module.mongo_connections import ZF_8, client_5
 import requests
 
 

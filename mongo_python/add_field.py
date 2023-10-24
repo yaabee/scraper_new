@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import ssl
 
-from mongo.mongo_connections import client_8
+from module.mongo_connections import client_8
 
 # client_239 = MongoClient('192.168.100.239:27017',
 #                          username='mongoroot',

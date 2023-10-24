@@ -4,7 +4,8 @@ import pandas as pd
 from pprint import pprint
 from pymongo import MongoClient
 import ssl
-from dataclasses import dataclass, asdict
+from dataclasses import asdict
+from YB_TYPES.custom_types import PayloadDublettencheck, Branche
 
 
 def save_list_to_text_file(file_path, string_list):
@@ -25,44 +26,6 @@ client_8 = MongoClient(
 ZF_8 = client_8['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 
 
-# def is_geo_valid(land: str, ort: str, plz: str, strasse_und_nr: str) -> bool:
-#     """momentan nur Deutschland?"""
-#     payload_geocoder = {
-#         "Land": land,
-#         "Ort": ort,
-#         "PLZ": plz,
-#         "StrasseUndNr": strasse_und_nr,
-#         "options": {"returnMultiple": False},
-#     }
-#     check = requests.post(
-#         "http://192.168.100.239:9099/geocoder", json=payload_geocoder
-#     ).json()
-
-#     if check["ok"]:
-#         return True
-#     return False
-
-@dataclass
-class PayloadDublettencheckOptions:
-    returnDocument: bool = False
-
-@dataclass
-class PayloadDublettencheck:
-    options: PayloadDublettencheckOptions = PayloadDublettencheckOptions()
-    Firma: str = ''
-    PLZ: str = ''
-    Ort: str = ''
-    Telefon: str = ''
-    Straße: str = ''
-    Email: str = ''
-    Internet: str = ''
-    Fax: str = 'xxxxx'
-
-@dataclass
-class Branche:
-    Herkunft: str
-    WZCode: int
-    Name: str
 
 
 def xlsxEinspielen(path: str, branche: Branche, tmpDb: str, is_testing: bool):

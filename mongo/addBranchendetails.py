@@ -1,4 +1,4 @@
-from mongo_connections import client_5, client_8
+from module.mongo_connections import client_5, client_8
 
 
 def rmBranchenDetailsExtern(zfids, rmBranchendetail):

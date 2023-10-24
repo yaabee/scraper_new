@@ -1,22 +1,14 @@
 from typing import Dict, Union
-from mongo_connections import client_8
-import pymongo
+from module.mongo_connections import client_8
 from pprint import pprint
 from dataclasses import dataclass, asdict
+from YB_TYPES.custom_types import Branche
 
 """
 finde alle ds mit branche 
 addtoset neue_branche
 pull alte branche
 """
-
-
-
-@dataclass
-class Branche:
-    Name: str
-    WZCode: Union[int, str]
-    Herkunft: str
 
 def switch_branchen_extern_stich_home(path: str,db: str, col: str,ctrl_begriff:str, alt_branche:Dict, neu_branche: Dict, debug: bool = True):
     collection = client_8[db][col]
@@ -55,8 +47,8 @@ if __name__ == '__main__':
 
     ctrl_begriff = 'misch_fhh/1'
     debug = False
-    neu_branche: Branche = Branche(Name='misch_fhh', Herkunft="1", WZCode=154121200)
-    alt_branche: Branche = Branche(Name=ctrl_begriff, Herkunft="Town&Country", WZCode='154121200')
+    # neu_branche: Branche = Branche(Name='misch_fhh', Herkunft="1", WZCode=154121200)
+    # alt_branche = Branche(Name=ctrl_begriff, Herkunft="Town&Country", WZCode='154121200')
     path = 'Meta.BranchenDetails.Extern'
     # path = 'Meta.BranchenDetails.Stichwoerter'
     # path = 'Meta.BranchenDetails.Homepage'

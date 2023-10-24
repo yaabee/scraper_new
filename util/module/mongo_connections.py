@@ -1,4 +1,4 @@
-from pymongo import MongoClient
+from pymongo import MongoClient, collection
 import ssl
 
 
@@ -24,7 +24,7 @@ client_8 = MongoClient(
 )
 
 client_5 = MongoClient("mongodb://192.168.100.5:27017")
-ZF_8 = client_8["ZentralerFirmenstamm"]["ZentralerFirmenstamm"]
+ZF_8  = client_8["ZentralerFirmenstamm"]["ZentralerFirmenstamm"]
 ANSPRECHPARTNER_8 = client_8["ZentralerFirmenstamm"]["Ansprechpartner"]  # ap_collection
 FA_239 = client_239["FirmenAdresse"]["FirmenAdresse"]  # fa_collection
 AUTOMATISCHE_BRANCHE_239 = client_239["staticdata"]["automatischeBranche"]
