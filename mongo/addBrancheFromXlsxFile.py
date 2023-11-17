@@ -31,6 +31,8 @@ ZF_8 = client_8['ZentralerFirmenstamm']['ZentralerFirmenstamm']
 def addBranchenDetailsExtern(zfids: List[str], addBranchendetail: Dict):
     input('wirklich starten?')
     for zfid in tqdm(zfids):
+        if "Object" in zfid:
+            zfid = zfid[10:-1]
         client_8["ZentralerFirmenstamm"]["ZentralerFirmenstamm"].update_one(
             {"ZFID": zfid},
             {"$addToSet": {"Meta.BranchenDetails.Extern": addBranchendetail}},
@@ -52,9 +54,8 @@ def xlsxEinspielen(path: str, branche: Dict, zfids: List[str] = []):
 if __name__ == "__main__":
 
     xlsxEinspielen(
-
-        '/home/user199/Desktop/master_listen/ausf_elektro_2_standardtisiert.xlsx',
-        branche=asdict(Branche(Name='ausf_elektro', Herkunft='2', WZCode=154321100)),
+        '/home/user199/Desktop/master_listen/stadt_liste_1.xlsx',
+        branche=asdict(Branche(Name='staedte', Herkunft='1', WZCode=248411103)),
     )
 
 
