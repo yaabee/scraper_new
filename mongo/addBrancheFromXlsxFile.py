@@ -12,12 +12,13 @@ from playsound import playsound
 
 def save_list_to_text_file(file_path, string_list):
     try:
-        with open(file_path, 'w') as file:
+        with open(file_path, "w") as file:
             for item in tqdm(string_list):
                 file.write("%s\n" % item)
-        print(f'Saved {len(string_list)} strings to {file_path}')
+        print(f"Saved {len(string_list)} strings to {file_path}")
     except Exception as e:
-        print(f'Error: {e}')
+        print(f"Error: {e}")
+
 
 client_8 = MongoClient(
     "mongodb://mongoroot:9gCaPFhotG2CNEoBRdgA@192.168.100.8:27017",
@@ -25,11 +26,11 @@ client_8 = MongoClient(
     ssl_cert_reqs=ssl.CERT_NONE,
 )
 
-ZF_8 = client_8['ZentralerFirmenstamm']['ZentralerFirmenstamm']
+ZF_8 = client_8["ZentralerFirmenstamm"]["ZentralerFirmenstamm"]
 
 
 def addBranchenDetailsExtern(zfids: List[str], addBranchendetail: Dict):
-    input('wirklich starten?')
+    input("wirklich starten?")
     for zfid in tqdm(zfids):
         if "Object" in zfid:
             zfid = zfid[10:-1]
@@ -42,21 +43,17 @@ def addBranchenDetailsExtern(zfids: List[str], addBranchendetail: Dict):
 def xlsxEinspielen(path: str, branche: Dict, zfids: List[str] = []):
     file = pd.read_excel(path)
     frame: pd.DataFrame = (file).fillna("xxxxx")
-    if not 'ZFID' in frame.columns:
-        raise Exception('ZFID')
+    if not "ZFID" in frame.columns:
+        raise Exception("ZFID")
     if zfids:
         addBranchenDetailsExtern(zfids, branche)
-    addBranchenDetailsExtern(list(frame['ZFID']),branche)
+    addBranchenDetailsExtern(list(frame["ZFID"]), branche)
 
-    playsound('/home/user199/Downloads/codec.mp3')
+    playsound("/home/user199/Downloads/codec.mp3")
 
 
 if __name__ == "__main__":
-
     xlsxEinspielen(
-        '/home/user199/Desktop/master_listen/stadt_liste_1.xlsx',
-        branche=asdict(Branche(Name='staedte', Herkunft='1', WZCode=248411103)),
+        "/home/user199/Downloads/20210315_fehlende_Städte_größer_20000.xlsx",
+        branche=asdict(Branche(Name="staedte", Herkunft="1", WZCode=248411103)),
     )
-
-
-

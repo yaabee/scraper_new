@@ -32,4 +32,4 @@ if __name__ == "__main__":
     addBranchendetail = dict(
         Name="solaranlageninstallationsservice", Herkunft="intersolar", WZCode=13
     )
-    addBranchenDetailsExtern(zfids, addBranchendetail)
+    rmBranchenDetailsExtern(zfids, addBranchendetail)

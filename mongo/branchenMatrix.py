@@ -47,10 +47,6 @@ misch_fhh = ['154121200']
 misch_mhh = ['154121100']
 misch_wowi = ['216811100']
 
-# print(len(ausf_wzcodes))
-# print(len(planer_wzcodes))
-
-
 counter = 1
 for idx, value in df.iterrows():
     row = list(zip(columns[1:], value.values[1:]))
@@ -86,7 +82,7 @@ for idx, value in df.iterrows():
                 no_wzcodes += misch_wowi
 
     for no in no_wzcodes:
-        mongoquery = {'Meta.Branchen': {'$all': yes_wzcodes + [no] }}
+        mongoquery = {'Meta.Branchen': {'$all': yes_wzcodes + [no] }, 'ZFID': '5eba5d58526ca3d89e5119d6'}
         pot_zfids_l = [x['ZFID'] for x in ZF_8.find(mongoquery, {'ZFID': 1})]
         pot_zfids_s = set(x['ZFID'] for x in ZF_8.find(mongoquery, {'ZFID': 1}))
         branche_x_zfids = set(x['ZFID'] for x in BRANCHEX.find({'ZFID': {'$in': pot_zfids_l}}, {'ZFID': 1}))
@@ -103,12 +99,12 @@ for idx, value in df.iterrows():
         if zfids_gesamt:
             widerspruch = f'Widerspruch: wenn {yes_name}{yes_wzcodes} dann darf nicht {no_name}{[no]}'
             for zfid in zfids_gesamt:
-                # print('=================================')
-                # print(zfid, widerspruch)
-                ZF_8.update_one({'ZFID': zfid}, {'$addToSet': {'Meta.PruefenGrund': widerspruch}, '$set': {'Meta.ZuPruefen': True}})
-    #             break
-    #         break
-    #     continue
+                print('=================================')
+                print(zfid, widerspruch)
+                # ZF_8.update_one({'ZFID': zfid}, {'$addToSet': {'Meta.PruefenGrund': widerspruch}, '$set': {'Meta.ZuPruefen': True}})
+            #     break
+            # break
+        pass
     # break
 
     if counter == 64:

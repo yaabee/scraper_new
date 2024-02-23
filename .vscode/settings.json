@@ -1,4 +1,12 @@
 {
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "python.analysis.extraPaths": [
+		"${workspaceFolder}/mongo/",
+		"/home/user199/.pyenv/shims/python",
+		"/home/user199/.pyenv/versions/flask_stuff/bin/python3.9",
+		"C:/Users/User199/AppData/Local/Temp/pip-req-build-c69_mgu2",
+		"/home/user199/.pyenv/versions/3.9.0/envs/flask_stuff/lib/python3.9/site-packages",
+		"./firmenadresse"
+	],
+	"python.languageServer": "Pylance",
 }

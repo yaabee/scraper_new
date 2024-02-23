@@ -1,6 +1,13 @@
 from pymongo import MongoClient
 import pandas as pd
+import datetime
+from dateutil.relativedelta import relativedelta
 
+
+def dateXMonthPast(anzahl_monate: int) -> str:
+    date = datetime.datetime.now()
+    dateXMonthFuture = date - relativedelta(months=anzahl_monate)
+    return dateXMonthFuture.isoformat()[:10] + "T00:00:00.000Z"
 
 def make_xlsx(array, file_name):
     df1 = pd.DataFrame(array)
@@ -11,13 +18,10 @@ def make_xlsx(array, file_name):
 def custom_export(db_name, col_name, file_name, keys, query, header):
     col = MongoClient("192.168.100.5:27017")[db_name][col_name]
     cursor = list(col.find(query))
-    print(len(cursor))
     export_arr = [header]
     for ds in cursor:
         row = []
         for key in keys:
-            print(key)
-            print(ds[key])
             if key in ds:
                 if ds[key]:
                     row.append(str(ds[key]))
@@ -203,16 +207,52 @@ lithonplus = [
 ]
 
 google_api = {
-    "keys": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Website", 'ZFID'],
-    "header": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Internet", 'ZFID'],
+    "keys": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Fax", "Email", "Internet"],
+    "header": ["Firma", "Telefon", "StrasseUndNr", "PLZ", "Ort", "Fax", "Email", "Internet"],
 }
+
+zfids = {"keys": ["ZFID"], "header": ["ZFID"]}
+
+# Equivalent of TZOObjektLieferantHerkunftZuNummer and TLieferanten
+ZO_OBJEKT_LIEFERANT_HERKUNFT_ZU_NUMMER = {
+    "Unbekannt": 0,
+    "AlteZO": 1,
+    "IBAU": 2,
+    "DTAD": 3,
+    "Bindexis": 4,
+    "Infoteam": 5,
+    "ICB": 6,
+    "Competition": 7,
+    "Uponor": 8,
+    "Hoermann": 9,
+    "Thomas_Daily": 10,
+    "Heinze": 11,
+    "VIP": 12,
+    "CISION": 13,
+}
+
+# Function equivalent to getLieferantenNummerFromHerkunft
+def get_lieferanten_nummer_from_herkunft(herkunft):
+    return ZO_OBJEKT_LIEFERANT_HERKUNFT_ZU_NUMMER.get(herkunft, 0)  # Returns 0 if herkunft not found
+
+# Function equivalent to getLieferantenTypFromNumber
+def get_lieferanten_typ_from_number(number):
+    # Reverse the dictionary to map numbers to names
+    number_to_name = {v: k for k, v in ZO_OBJEKT_LIEFERANT_HERKUNFT_ZU_NUMMER}
+
 
 
 if __name__ == "__main__":
-    query = {}
-    db_name = "GoogleApi"
-    col_name = "google_Intersolar"
-    file_name = "google_Intersolar"
+    query = {        "$and": [
+            # {"Baubeginn": "1970-01-01T00:00:00.000Z"},
+            # {"Meta.Exportierbar": True},
+            {"Meta.Erstellung": {"$gte": dateXMonthPast(12)}},
+            {"IstDublette": False},
+            {"Meta.Pruefungsgrund": {"$in": ["Das Feld 'beteiligte' muss mindestens 1 Einträge beinhalten."]}},
+        ]}
+    db_name = "zo_objekt"
+    col_name = "zo_objekt"
+    file_name = "beteiligte_mit_lieferanten_info"
 
     custom_export(
         db_name=db_name,
@@ -222,3 +262,5 @@ if __name__ == "__main__":
         query=query,
         header=google_api["header"],
     )
+
+
